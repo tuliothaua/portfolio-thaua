@@ -2,42 +2,151 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* TEXT SELECTION STYLES */
 ::selection {
   color: white;
-  background-color: rgb(154, 157, 78);
+  background-color: #9a9d4e;
+}
+
+/* LOADING SCREEN */
+
+#loading-screen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: linear-gradient(black, #1a1a1a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.anima {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: 4px 0 0 #9a9d4e;
+    animation: anima 1s linear infinite;
+}
+
+.loading-img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    color: #9a9d4e;
+    position: fixed;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 300px;
+    font-size: 32px;
+    background: url('/portfolio-thaua/front-end/arq/img/Thauã-Logo-GPT.png') no-repeat center/cover;
+    box-shadow: 0 0 5px #9a9d4e;   
+    
+}
+
+@keyframes anima {
+    0% { 
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* MAIN BODY */
 .Current-body {
-    background-color: black;
-    color: white;
+    background: linear-gradient(to right,#000000, #1a1a1a, #000000);
+    color: black;
 }
 
-/* DIV ABOUT ME */
+/* HEADER */
+header {
+    padding: 30px;
+    background: linear-gradient(to right,#323311, #5e5e55, #56582f);
+}
 
-.div-about {
-    margin: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    text-align: justify;
-    background-color: aliceblue;
+header h1{
+    text-align: center;
+    font-size: 15pt;
+    font-weight: bold;
+    filter: drop-shadow(0 0 15px rgb(255, 255, 255));
+}
+
+header a {
+    padding: 0 20px;
+    font-size: 5pt;
+    font-weight: bold;
+    color: black;
     
+    text-decoration: none;
+}
+
+#software {
+    filter: drop-shadow(0 0 15px rgb(255, 255, 255));
+     animation: animation-software 5s  infinite;
+}
+
+#software:hover {
+    transform: scale(1.2);
+}
+
+@keyframes animation-software {
+    0% {
+        color: rgb(255, 255, 255);
+    }
+    33% {
+        color: rgb(56, 54, 9);
+    }
+    66% {
+        color: rgb(255, 255, 255);
+    }
+    100% {
+        color: rgb(152, 140, 32);
+    }
+}
+/* DIV ABOUT ME */
+.div-about {
+    margin: 30px auto;
+    height: 250px;
+    width: 500px;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    box-shadow: 0 0 10px #9a9d4e;
+    background-color: aliceblue;
+    border-radius: 20px;
 }
 
 
 /* MAIN FOOTER */
 footer {
+    background: linear-gradient(to right,#323311, #5e5e55, #56582f);
     position: fixed;
     bottom: 0;
     left: 0;
-    right: 0;
-    text-align: center;
-    padding: 10px;
-    color: white;
+    width: 100%;
+    padding: 20px 0;
 }
 
+footer p {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
 
+/* AUDIO WICK */
+
+.audio-container {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
 
