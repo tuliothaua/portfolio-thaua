@@ -1,10 +1,15 @@
 /* SCRIPT JAVASCRIPT */
 
+//BARRA DE NAV
+
 /* AUDIO */
 const audioWick = document.querySelector("#audwick");
 
-audioWick.play();
 audioWick.volume = 0.1;
+audioWick.autoplay = true;
+audioWick.play().catch(() => {
+    // O navegador pode bloquear autoplay; trate o erro se necessário
+});
 
 /* LOADING SCREEN */
 
@@ -25,9 +30,7 @@ window.addEventListener("load", function () {
             setTimeout(() => {
                 // Define a propriedade display como "none" para ocultar completamente o elemento
                 loadingElement.style.display = "none";
-            }, 2000);
-        }, 2000);
+            }, 1500);
+        }, 1500);
     }
 });
-
-

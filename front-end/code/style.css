@@ -5,6 +5,9 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* BARRA DE NAVEGAÇÃO */
+
+
 /* TEXT SELECTION STYLES */
 ::selection {
   color: white;
@@ -46,7 +49,7 @@
     text-align: center;
     line-height: 300px;
     font-size: 32px;
-    background: url('/portfolio-thaua/front-end/arq/img/Thauã-Logo-GPT.png') no-repeat center/cover;
+    background: url('/front-end/arq/img/Thauã-Logo-GPT.png') no-repeat center/cover;
     box-shadow: 0 0 5px #9a9d4e;   
     
 }
@@ -73,8 +76,9 @@ header {
 }
 
 header h1{
-    text-align: center;
+    
     font-size: 15pt;
+    color: white;
     font-weight: bold;
     filter: drop-shadow(0 0 15px rgb(255, 255, 255));
 }
@@ -84,12 +88,11 @@ header a {
     font-size: 5pt;
     font-weight: bold;
     color: black;
-    
     text-decoration: none;
 }
 
 #software {
-    filter: drop-shadow(0 0 15px rgb(255, 255, 255));
+    filter: drop-shadow(0 0 15px #ffffff);
      animation: animation-software 5s  infinite;
 }
 
@@ -99,16 +102,16 @@ header a {
 
 @keyframes animation-software {
     0% {
-        color: rgb(255, 255, 255);
+        color: #ffffff;
     }
     33% {
-        color: rgb(56, 54, 9);
+        color: #383609;
     }
     66% {
-        color: rgb(255, 255, 255);
+        color: #000000;
     }
     100% {
-        color: rgb(152, 140, 32);
+        color: #ffffff;
     }
 }
 /* DIV ABOUT ME */
@@ -138,6 +141,7 @@ footer {
 
 footer p {
     text-align: center;
+    color: white;
     font-style: italic;
     font-weight: bold;
 }
