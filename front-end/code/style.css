@@ -5,6 +5,36 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* BARRA DE NAVEGAÇÃO */
+.nav {
+    background: linear-gradient(to right,#323311, #5e5e55, #56582f);
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.nav a {
+    color: black;
+    text-decoration: none;
+    padding: 0px 20px;
+    font: 5pt;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    font-size: 15pt;
+}
+
+.nav a:hover{
+    color: white;
+    background: rgba(154, 157, 78, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(154, 157, 78, 0.5);
+   
+}
+
+
+
 /* TEXT SELECTION STYLES */
 ::selection {
   color: white;
@@ -46,7 +76,7 @@
     text-align: center;
     line-height: 300px;
     font-size: 32px;
-    background: url('/portfolio-thaua/front-end/arq/img/Thauã-Logo-GPT.png') no-repeat center/cover;
+    background: url('/front-end/arq/img/Thauã-Logo-GPT.png') no-repeat center/cover;
     box-shadow: 0 0 5px #9a9d4e;   
     
 }
@@ -69,48 +99,20 @@
 /* HEADER */
 header {
     padding: 30px;
-    background: linear-gradient(to right,#323311, #5e5e55, #56582f);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
 header h1{
-    text-align: center;
+    margin: 0;
     font-size: 15pt;
+    color: white;
     font-weight: bold;
     filter: drop-shadow(0 0 15px rgb(255, 255, 255));
 }
 
-header a {
-    padding: 0 20px;
-    font-size: 5pt;
-    font-weight: bold;
-    color: black;
-    
-    text-decoration: none;
-}
-
-#software {
-    filter: drop-shadow(0 0 15px rgb(255, 255, 255));
-     animation: animation-software 5s  infinite;
-}
-
-#software:hover {
-    transform: scale(1.2);
-}
-
-@keyframes animation-software {
-    0% {
-        color: rgb(255, 255, 255);
-    }
-    33% {
-        color: rgb(56, 54, 9);
-    }
-    66% {
-        color: rgb(255, 255, 255);
-    }
-    100% {
-        color: rgb(152, 140, 32);
-    }
-}
 /* DIV ABOUT ME */
 .div-about {
     margin: 30px auto;
@@ -138,6 +140,7 @@ footer {
 
 footer p {
     text-align: center;
+    color: white;
     font-style: italic;
     font-weight: bold;
 }
@@ -149,4 +152,8 @@ footer p {
     padding: 20px;
     text-align: center;
 }
+
+/* NOVO HEADER */
+
+
 
