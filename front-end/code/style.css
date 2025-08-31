@@ -7,7 +7,7 @@
 
 /* BARRA DE NAVEGAÇÃO */
 .nav {
-    background: linear-gradient(to right,#323311, #5e5e55, #56582f);
+    background: linear-gradient(to right,#ffffff, #5e5e55, #ffffff);
     top: 0;
     left: 0;
     right: 0;
@@ -16,7 +16,7 @@
 
 
 .nav a {
-    color: black;
+    color: #1a1a1a;
     text-decoration: none;
     padding: 0px 20px;
     font: 5pt;
@@ -33,7 +33,11 @@
    
 }
 
-
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin-left: 20px;
+}
 
 /* TEXT SELECTION STYLES */
 ::selection {
@@ -92,9 +96,12 @@
 
 /* MAIN BODY */
 .Current-body {
-    background: linear-gradient(to right,#000000, #1a1a1a, #000000);
+    background: linear-gradient(to right,#000000, #1a1a1a,#000000);
     color: black;
+    margin-bottom: 80px;
+    height: 92vh;
 }
+
 
 /* HEADER */
 header {
@@ -105,17 +112,21 @@ header {
     
 }
 
-header h1{
+.logo {
+    cursor: default;
+    text-transform: uppercase;
+    letter-spacing: 4px;
     margin: 0;
-    font-size: 15pt;
-    color: white;
+    font-size: 24pt;
     font-weight: bold;
     filter: drop-shadow(0 0 15px rgb(255, 255, 255));
 }
 
 /* DIV ABOUT ME */
 .div-about {
-    margin: 30px auto;
+    animation: slideIn 3s forwards;
+    margin: 50px;
+    cursor: default;
     height: 250px;
     width: 500px;
     padding: 30px;
@@ -123,14 +134,28 @@ header h1{
     font-size: 15px;
     line-height: 1.5;
     box-shadow: 0 0 10px #9a9d4e;
-    background-color: aliceblue;
+    background-color: #5e5e55cc;
+    color: white;
     border-radius: 20px;
+    position: relative;
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 
 /* MAIN FOOTER */
 footer {
-    background: linear-gradient(to right,#323311, #5e5e55, #56582f);
+    background: linear-gradient(to right,#ffffff, #5e5e55, #ffffff);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -138,10 +163,15 @@ footer {
     padding: 20px 0;
 }
 
-footer p {
+footer a {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-decoration: none;
     text-align: center;
     color: white;
     font-style: italic;
+    height: 100%;
     font-weight: bold;
 }
 
