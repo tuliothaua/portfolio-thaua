@@ -80,7 +80,7 @@
     text-align: center;
     line-height: 300px;
     font-size: 32px;
-    background: url('front-end/arq/img/Thauã-Logo-GPT.png') no-repeat center/cover;
+    background: url('../arq/img/Thauã-Logo-GPT.png') no-repeat center/cover;
     box-shadow: 0 0 5px #9a9d4e;   
     
 }
