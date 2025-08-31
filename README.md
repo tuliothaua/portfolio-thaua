@@ -11,7 +11,7 @@ O desafio é pessoal: **construir todo esse projeto com o auxílio mínimo de IA
 ## 🛠 Tecnologias Utilizadas  
 - **HTML5**  
 - **CSS3**  
-- **JavaScriptgit**  
+- **JavaScript**  
 - **Git**
 - Outras ferramentas que irei incluir conforme o projeto evolui.  
 
