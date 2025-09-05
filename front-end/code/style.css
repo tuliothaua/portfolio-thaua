@@ -98,8 +98,8 @@
 .Current-body {
     background: linear-gradient(to right,#000000, #1a1a1a,#000000);
     color: black;
-    margin-bottom: 80px;
-    height: 92vh;
+    min-height: 100vh;
+    margin-bottom: 100px;
 }
 
 
@@ -109,6 +109,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     
 }
 
@@ -138,6 +139,41 @@ header {
     color: white;
     border-radius: 20px;
     
+    
+}
+
+
+
+/* Div Habilidades */
+ 
+.div-habilidades {
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.div-habilidades img {
+  
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    
+    transition: transform 0.3s ease-in-out;
+}
+
+.div-habilidades img:hover {
+    transform: scale(1.2);
+    text-align: center;
+}
+
+
+.div-habilidades h2{
+    font-size: 20pt;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
 }
 
 
@@ -161,6 +197,7 @@ footer {
     left: 0;
     width: 100%;
     padding: 20px 0;
+    
 }
 
 footer a {
@@ -174,6 +211,8 @@ footer a {
     height: 100%;
     font-weight: bold;
     transition: all 0.5s ease-in-out;
+    
+    
 }
 
 footer a:hover {
@@ -183,13 +222,7 @@ footer a:hover {
     box-shadow: 0 0 5px rgba(154, 157, 78, 0.5);
 }
 
-/* AUDIO WICK */
 
-.audio-container {
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-}
 
 /* NOVO HEADER */
 
