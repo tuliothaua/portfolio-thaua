@@ -97,7 +97,6 @@
 /* MAIN BODY */
 .Current-body {
     background: linear-gradient(to right,#000000, #1a1a1a,#000000);
-    color: black;
     min-height: 100vh;
     margin-bottom: 100px;
 }
@@ -120,7 +119,7 @@ header {
     margin: 0;
     font-size: 24pt;
     font-weight: bold;
-    filter: drop-shadow(0 0 15px rgb(255, 255, 255));
+    filter: drop-shadow(0 0 15px #ffffff);
 }
 
 /* DIV CONTAINER */
@@ -170,17 +169,15 @@ header {
   
 }
 
-
-
 /* Div Habilidades */
  
-.div-habilidades {
+#div-habilidades {
     text-align: center;
     gap: 20px;
     padding: 20px;
 }
 
-.div-habilidades img {
+#div-habilidades img {
   
     width: 50px;
     height: 50px;
@@ -188,13 +185,13 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
-.div-habilidades img:hover {
+#div-habilidades img:hover {
     transform: scale(1.2);
     text-align: center;
 }
 
 
-.div-habilidades h2{
+#div-habilidades h2{
     font-size: 20pt;
     margin-bottom: 20px;
     color: white;
@@ -218,6 +215,7 @@ header {
 
 /* MAIN FOOTER */
 footer {
+
     background: linear-gradient(to right,#ffffff, #5e5e55, #ffffff);
     position: fixed;
     bottom: 0;
@@ -233,7 +231,7 @@ footer a {
     align-items: center; /* Center vertically */
     text-decoration: none;
     text-align: center;
-    color: white;
+    color: #1a1a1a;
     font-style: italic;
     height: 100%;
     font-weight: bold;
