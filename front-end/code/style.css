@@ -41,7 +41,7 @@
 
 /* TEXT SELECTION STYLES */
 ::selection {
-  color: white;
+  color: black;
   background-color: #9a9d4e33;
 }
 
@@ -123,6 +123,18 @@ header {
     filter: drop-shadow(0 0 15px rgb(255, 255, 255));
 }
 
+/* DIV CONTAINER */
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; 
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+
 /* DIV ABOUT ME */
 .div-about {
     animation: slideIn 3s forwards;
@@ -142,6 +154,22 @@ header {
     
 }
 
+/* IMAGEM TULIO */
+.img-tulio {
+    width: 250px;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #5e5e55;
+    transition: transform 0.3s ease-in-out;
+    
+}
+.img-tulio:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    
+  
+}
+
 
 
 /* Div Habilidades */
@@ -157,7 +185,6 @@ header {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    
     transition: transform 0.3s ease-in-out;
 }
 
@@ -176,7 +203,7 @@ header {
     text-align: center;
 }
 
-
+/* ANIMAÇÃO DE SLIDE */
 @keyframes slideIn {
     from {
         transform: translateX(-100%);
@@ -221,10 +248,3 @@ footer a:hover {
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(154, 157, 78, 0.5);
 }
-
-
-
-/* NOVO HEADER */
-
-
-
