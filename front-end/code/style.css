@@ -200,6 +200,59 @@ header {
     text-align: center;
 }
 
+
+/* Div Projetos */
+
+#div-projetos {
+    color: white;
+    text-align: center;
+    gap: 20px;
+    display: flex;
+    padding: 20px;
+    margin-top: 50px;
+    width: 300px;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #5e5e55cc;
+    box-shadow: 0 0 10px #4e859d;
+    transition: transform 0.3s ease-in-out;
+}
+
+#div-projetos:hover {
+    transform: scale(1.03);
+    
+}
+
+.projeto1 img {
+    text-align: center;
+    gap: 20px;
+    display: block;
+    margin-top: 20px;
+    width: 300px;
+}
+
+.projeto1 h3 {
+    color: black;
+}
+
+
+
+.button-link {
+    background-color: #1a1a1a;
+    display: inline-block;
+    line-height: 40px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.button-link:hover {
+    transform: scale(1.1);
+}
+
 /* ANIMAÇÃO DE SLIDE */
 @keyframes slideIn {
     from {
