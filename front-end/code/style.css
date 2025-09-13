@@ -82,7 +82,6 @@
     font-size: 32px;
     background: url('../arq/img/Thauã-Logo-GPT.png') no-repeat center/cover;
     box-shadow: 0 0 5px #9a9d4e;   
-    
 }
 
 @keyframes anima {
@@ -108,8 +107,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    
 }
 
 .logo {
@@ -149,8 +146,6 @@ header {
     background-color: #5e5e55cc;
     color: white;
     border-radius: 20px;
-    
-    
 }
 
 /* IMAGEM TULIO */
@@ -160,13 +155,10 @@ header {
     border-radius: 30px;
     box-shadow: 0 0 10px #5e5e55;
     transition: transform 0.3s ease-in-out;
-    
 }
 .img-tulio:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
-    
-  
 }
 
 /* Div Habilidades */
@@ -178,7 +170,6 @@ header {
 }
 
 #div-habilidades img {
-  
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -192,65 +183,83 @@ header {
 
 
 #div-habilidades h2{
+    color: white;
     font-size: 20pt;
     margin-bottom: 20px;
-    color: white;
     font-weight: bold;
     text-decoration: none;
     text-align: center;
 }
 
 
-/* Div Projetos */
-
+/* DIV DOS PROJETOS */
 #div-projetos {
-    color: white;
-    text-align: center;
-    gap: 20px;
+    margin: 0;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 50px;
     display: flex;
-    padding: 20px;
-    margin-top: 50px;
-    width: 300px;
-    margin: auto;
-    border-radius: 20px;
+}
+
+.projeto1 {
+    color: white;
     background-color: #1b202a;
-    box-shadow: 0 0 10px #ffffff;
-    transition: transform 0.3s ease-in-out;
-}
-
-#div-projetos:hover {
-    transform: scale(1.03);
-    
-}
-
-.projeto1 img {
-    text-align: center;
     gap: 20px;
-    display: block;
+    margin-top: 50px;
+    margin: 0;
+    padding: 20px;
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.projeto1:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #ffffff ;
+}
+
+.projeto2:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #dc9223;
+}
+
+.projeto1 img, .projeto2 img {
     margin-top: 20px;
     width: 300px;
 }
 
-.projeto1 h3 {
-    color: rgb(255, 255, 255);
+.projeto2 {
+    color: white;
+    background-color: #1c180f;
+    width: 300px;
+    height: 350px;
+    margin: 0;
+    padding: 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 
-
-
+/* BOTAO VER PROJETO */
 .button-link {
     background-color: #1a1a1a;
     display: inline-block;
     line-height: 40px;
+    margin-top: 20px;
     text-decoration: none;
     color: white;
     border-radius: 5px;
     padding: 5px;
-    margin: 20px;
-    transition: transform 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .button-link:hover {
     transform: scale(1.1);
+    background-color: #000000;
+    opacity: 0.8;
 }
 
 /* ANIMAÇÃO DE SLIDE */
@@ -264,7 +273,6 @@ header {
         opacity: 1;
     }
 }
-
 
 /* MAIN FOOTER */
 footer {
