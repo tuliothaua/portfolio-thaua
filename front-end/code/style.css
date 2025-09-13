@@ -213,8 +213,8 @@ header {
     width: 300px;
     margin: auto;
     border-radius: 20px;
-    background-color: #5e5e55cc;
-    box-shadow: 0 0 10px #4e859d;
+    background-color: #1b202a;
+    box-shadow: 0 0 10px #ffffff;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -232,7 +232,7 @@ header {
 }
 
 .projeto1 h3 {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 
