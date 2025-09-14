@@ -44,3 +44,54 @@ window.addEventListener("load", function () {
         }, 1500);
     }
 });
+
+// DESENVOLVEDOR DE SOFTWARE
+const developerText = document.querySelector(".futuro-software");
+
+if (developerText) {
+    const text = "[> Futuro Desenvolvedor de Software <]... ";
+    let index = 0;
+
+    function typeText() {
+        if (index < text.length) {
+            developerText.textContent += text[index];
+            developerText.style.color = "green";
+            developerText.style.fontWeight = "bold";
+            developerText.style.textAlign = "center";
+            developerText.style.fontSize = "30px";
+            developerText.style.padding = "15px";
+            developerText.style.fontFamily = "'Courier New', Courier, monospace";
+            developerText.style.letterSpacing = "2px";
+            developerText.style.backgroundColor = "#1a1a1a";
+            developerText.style.borderRadius = "15px";
+            developerText.style.width = "fit-content";
+            developerText.style.margin = "0 auto";
+            developerText.style.marginTop = "20px";
+            index++;
+            setTimeout(typeText, 200);
+        } else {
+            addBlinkingCursor(); // Adiciona o cursor piscante após o texto ser digitado
+        }
+    }
+
+    function addBlinkingCursor() {
+        const cursor = document.createElement("span");
+        cursor.textContent = "▯";
+        cursor.style.display = "inline-block";
+        cursor.style.animation = "blink 1s step-end infinite";
+        developerText.appendChild(cursor);
+
+        // Adiciona o estilo de animação para o cursor piscante
+        const style = document.createElement("style");
+        style.textContent = `
+            @keyframes blink {
+                50% {
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    typeText();
+}
