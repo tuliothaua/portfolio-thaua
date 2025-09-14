@@ -65,7 +65,7 @@ const helloWorldContact = document.querySelector("#helloWorld");
 
 // Verifica se o elemento existe na página
 if (helloWorldContact) {
-    const text = "[Hello World... e aí pronto para ver o que vem depois?]...";
+    const text = "[Hello World...e aí pronto para ver o que vem depois?]...";
     let index = 0; // Controla qual letra será exibida
     const speed = 150; // Velocidade de digitação (em milissegundos)
 
