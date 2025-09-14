@@ -167,6 +167,18 @@ header {
     overflow: auto; 
 }
 
+/* ANIMAÇÃO DE SLIDE */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* IMAGEM TULIO */
 .img-tulio {
     width: 250px;
@@ -180,7 +192,7 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Div Habilidades */
+/* DIV HABILIDADES */
 
 #div-habilidades {
     text-align: center;
@@ -235,11 +247,13 @@ header {
 .projeto1:hover {
     transform: scale(1.03);
     box-shadow: 0 0 10px #ffffff;
+    cursor: default;
 }
 
 .projeto2:hover {
     transform: scale(1.03);
     box-shadow: 0 0 10px #dc9223;
+    cursor: default;
 }
 
 .projeto1 img,
@@ -277,18 +291,72 @@ header {
     transform: scale(1.1);
     background-color: #000000;
     opacity: 0.8;
+    cursor: pointer;
 }
 
-/* ANIMAÇÃO DE SLIDE */
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+/* DIV EXPERIÊNCIA */
+
+#experiencia {
+    margin: 0;
+    margin-top: 10px;
+    justify-content: center;
+    gap: 50px;
+    display: flex;
+}
+
+.exp1 {
+    color: white;
+    background-color: #04182f;
+    margin-top: 20px;
+    font-size: 12px;
+    margin: 0px;
+    padding: 40px;
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 1.5;
+    transition: all 0.3s ease-in-out;
+}
+
+.exp1:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #ffffff;
+    cursor: crosshair;
+    filter: drop-shadow(0 0 10px #dc3523);
+}
+
+.exp1 h3 {
+    font-size: 17pt;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.exp1 img{
+    margin: 0px 100px 0px;
+    display: block;
+    width: 100px;
+    border-radius: 20%;
+}
+
+.exp1-competencia {
+    display: flex; 
+    gap: 10px; 
+    flex-wrap: wrap; 
+    margin-top: 10px;
+}
+
+.exp1-competencia p {
+    background-color: #ffffff;
+    color: black;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 10pt;
+    text-align: center; 
 }
 
 /* MAIN FOOTER */
