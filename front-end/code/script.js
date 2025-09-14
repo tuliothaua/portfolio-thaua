@@ -37,53 +37,26 @@ window.addEventListener("load", function () {
     }
 });
 
-// DESENVOLVEDOR DE SOFTWARE
-const developerText = document.querySelector(".futuro-software");
+// TEXTO [DESENVOLVEDOR DE SOFTWARE ▯]
+const developerText = document.querySelector(".futuro-software")
+  if (developerText) {
+    const text = "[> Futuro Desenvolvedor de Software <]..."
+    let index = 0
+    const speed = 200
 
-if (developerText) {
-    const text = "[> Futuro Desenvolvedor de Software <]... ";
-    let index = 0;
-
+    // Função para digitar o texto
     function typeText() {
         if (index < text.length) {
-            developerText.textContent += text[index];
-            developerText.style.color = "green";
-            developerText.style.fontWeight = "bold";
-            developerText.style.textAlign = "center";
-            developerText.style.fontSize = "30px";
-            developerText.style.padding = "15px";
-            developerText.style.fontFamily = "'Courier New', Courier, monospace";
-            developerText.style.letterSpacing = "2px";
-            developerText.style.backgroundColor = "#1a1a1a";
-            developerText.style.borderRadius = "15px";
-            developerText.style.width = "fit-content";
-            developerText.style.margin = "0 auto";
-            developerText.style.marginTop = "20px";
-            index++;
-            setTimeout(typeText, 200);
+            developerText.textContent += text[index++]
+            setTimeout(typeText, speed)
         } else {
-            addBlinkingCursor(); // Adiciona o cursor piscante após o texto ser digitado
+            // Adiciona o cursor piscante após o texto ser completamente digitado
+            const cursor = document.createElement("span")
+            cursor.textContent = "▯";
+            cursor.classList.add("blinking-cursor")
+            developerText.appendChild(cursor)
         }
     }
-
-    function addBlinkingCursor() {
-        const cursor = document.createElement("span");
-        cursor.textContent = "▯";
-        cursor.style.display = "inline-block";
-        cursor.style.animation = "blink 1s step-end infinite";
-        developerText.appendChild(cursor);
-
-        // Adiciona o estilo de animação para o cursor piscante
-        const style = document.createElement("style");
-        style.textContent = `
-            @keyframes blink {
-                50% {
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    }
-
-    typeText();
+    developerText.classList.add("futuro-software")
+    typeText()
 }
