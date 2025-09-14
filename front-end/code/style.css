@@ -359,6 +359,44 @@ header {
     text-align: center; 
 }
 
+/* DIV CONTATO */
+#helloWorld {
+    color: green;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    width: fit-content;
+    margin: 80px auto 0;
+}
+
+.div-contatos {
+    text-align: center;
+    gap: 50px;
+    margin-top: 50px;
+    padding: 10px auto;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.div-contatos img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.div-contatos img:hover {
+    transform: scale(1.2);
+    text-align: center;
+    filter: drop-shadow(0 0 10px #23dc2c);
+}
+
 /* MAIN FOOTER */
 footer {
     background: linear-gradient(to right, #ffffff, #5e5e55, #ffffff);
