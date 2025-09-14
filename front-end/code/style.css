@@ -7,13 +7,12 @@
 
 /* BARRA DE NAVEGAÇÃO */
 .nav {
-    background: linear-gradient(to right,#ffffff, #5e5e55, #ffffff);
+    background: linear-gradient(to right, #ffffff, #5e5e55, #ffffff);
     top: 0;
     left: 0;
     right: 0;
     transition: all 0.3s ease-in-out;
 }
-
 
 .nav a {
     color: #1a1a1a;
@@ -25,12 +24,11 @@
     font-size: 15pt;
 }
 
-.nav a:hover{
+.nav a:hover {
     color: white;
     background: #9a9d4e33;
     border-radius: 5px;
     box-shadow: 0 0 5px #9a9d4e80;
-   
 }
 
 .nav-list {
@@ -41,8 +39,8 @@
 
 /* TEXT SELECTION STYLES */
 ::selection {
-  color: black;
-  background-color: #9a9d4e33;
+    color: black;
+    background-color: #9a9d4e33;
 }
 
 /* LOADING SCREEN */
@@ -70,7 +68,7 @@
     animation: anima 1s linear infinite;
 }
 
-.loading-img{
+.loading-img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -80,12 +78,12 @@
     text-align: center;
     line-height: 300px;
     font-size: 32px;
-    background: url('../arq/img/Thauã-Logo-GPT.png') no-repeat center/cover;
-    box-shadow: 0 0 5px #9a9d4e;   
+    background: url("../arq/img/Thauã-Logo-GPT.png") no-repeat center/cover;
+    box-shadow: 0 0 5px #9a9d4e;
 }
 
 @keyframes anima {
-    0% { 
+    0% {
         transform: rotate(0deg);
     }
     100% {
@@ -95,11 +93,10 @@
 
 /* MAIN BODY */
 .Current-body {
-    background: linear-gradient(to right,#000000, #1a1a1a,#000000);
+    background: linear-gradient(to right, #000000, #1a1a1a, #000000);
     min-height: 100vh;
     margin-bottom: 100px;
 }
-
 
 /* HEADER */
 header {
@@ -125,18 +122,18 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px; 
+    gap: 50px;
     margin: 50px auto;
     max-width: 1000px;
 }
-
 
 /* DIV ABOUT ME */
 .div-about {
     animation: slideIn 3s forwards;
     margin: 50px;
     cursor: default;
-    height: 300px;
+    min-height: 300px; 
+    max-height: 350px; 
     width: 500px;
     padding: 30px;
     font-family: Arial, Helvetica, sans-serif;
@@ -146,6 +143,7 @@ header {
     background-color: #5e5e55cc;
     color: white;
     border-radius: 20px;
+    overflow: auto; 
 }
 
 /* IMAGEM TULIO */
@@ -162,7 +160,7 @@ header {
 }
 
 /* Div Habilidades */
- 
+
 #div-habilidades {
     text-align: center;
     gap: 20px;
@@ -181,8 +179,7 @@ header {
     text-align: center;
 }
 
-
-#div-habilidades h2{
+#div-habilidades h2 {
     color: white;
     font-size: 20pt;
     margin-bottom: 20px;
@@ -190,7 +187,6 @@ header {
     text-decoration: none;
     text-align: center;
 }
-
 
 /* DIV DOS PROJETOS */
 #div-projetos {
@@ -215,10 +211,9 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
-
 .projeto1:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 10px #ffffff ;
+    box-shadow: 0 0 10px #ffffff;
 }
 
 .projeto2:hover {
@@ -226,7 +221,8 @@ header {
     box-shadow: 0 0 10px #dc9223;
 }
 
-.projeto1 img, .projeto2 img {
+.projeto1 img,
+.projeto2 img {
     margin-top: 20px;
     width: 300px;
 }
@@ -276,14 +272,12 @@ header {
 
 /* MAIN FOOTER */
 footer {
-
-    background: linear-gradient(to right,#ffffff, #5e5e55, #ffffff);
+    background: linear-gradient(to right, #ffffff, #5e5e55, #ffffff);
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 20px 0;
-    
 }
 
 footer a {
@@ -297,8 +291,6 @@ footer a {
     height: 100%;
     font-weight: bold;
     transition: all 0.5s ease-in-out;
-    
-    
 }
 
 footer a:hover {
