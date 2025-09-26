@@ -426,3 +426,45 @@ footer a:hover {
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(154, 157, 78, 0.5);
 }
+
+/*****************/
+/* MOBILE CONFIG */
+/*****************/
+
+@media (max-width: 768px) {
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-container img {
+    width: 80%; 
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  #div-projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #div-experiencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+
+
