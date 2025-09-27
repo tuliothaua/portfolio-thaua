@@ -426,3 +426,88 @@ footer a:hover {
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(154, 157, 78, 0.5);
 }
+
+/* --- Desktop (mais de 900px de largura) --- */
+@media (max-width: 900px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .div-about {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .img-tulio {
+        width: 200px;
+    }
+
+    #div-habilidades img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .projeto1, .projeto2 {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .exp1 {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .div-contatos {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* --- Celular (até 600px de largura) --- */
+@media (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav a {
+        font-size: 12pt;
+        padding: 10px;
+    }
+
+    .futuro-software {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .div-about {
+        font-size: 14px;
+        padding: 20px;
+    }
+
+    .img-tulio {
+        width: 150px;
+    }
+
+    #div-habilidades img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .projeto1, .projeto2 {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .exp1 {
+        font-size: 10px;
+        padding: 20px;
+    }
+
+    .div-contatos img {
+        width: 40px;
+        height: 40px;
+    }
+}
