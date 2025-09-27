@@ -1,13 +1,83 @@
-/* RESET STYLES */
+/*********** RESET VARIABLES ***********/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/************ ROOT VARIABLES ************/
+:root {
+    /* NAVBAR COLORS */
+    --nav-gradient: linear-gradient(to right, #ffffff, #5e5e55, #ffffff);
+    --nav-link-color: #1a1a1a;
+    --nav-link-hover-bg: rgba(154, 157, 78, 0.2);
+    --nav-link-hover-color: white;
+    --nav-link-hover-shadow: rgba(154, 157, 78, 0.5);
+
+    /* TEXT SELECTION */
+    --selection-bg: rgba(154, 157, 78, 0.2);
+    --selection-color: black;
+
+    /* LOADING SCREEN */
+    --loading-bg: linear-gradient(black, #1a1a1a);
+    --loading-shadow: #9a9d4e;
+
+    /* MAIN BODY */
+    --main-bg: linear-gradient(to right, #000000, #1a1a1a, #000000);
+
+    /* HEADER */
+    --logo-shadow: #ffffff;
+
+    /* FUTURO SOFTWARE TEXT */
+    --futuro-bg: #1a1a1a;
+    --futuro-color: green;
+
+    /* DIV ABOUT */
+    --div-about-bg: rgba(94, 94, 85, 0.8);
+    --div-about-shadow: #5e5e55;
+    --div-about-color: white;
+
+    /* IMAGES */
+    --img-shadow: #5e5e55;
+
+    /* PROJETOS */
+    --projeto1-bg: #1b202a;
+    --projeto2-bg: #1c180f;
+    --projeto1-hover-shadow: #ffffff;
+    --projeto2-hover-shadow: #dc9223;
+    --button-bg: #1a1a1a;
+    --button-hover-bg: #000000;
+
+    /* EXPERIÊNCIA */
+    --exp-bg: #04182f;
+    --exp-hover-shadow: #ffffff;
+    --exp-hover-filter: #dc3523;
+    --exp-color: white;
+    --exp-competencia-bg: #ffffff;
+    --exp-competencia-color: black;
+
+    /* CONTATO */
+    --contato-bg: #1a1a1a;
+    --contato-color: green;
+    --contato-hover-shadow: #23dc2c;
+
+    /* FOOTER */
+    --footer-bg: linear-gradient(to right, #ffffff, #5e5e55, #ffffff);
+    --footer-link-color: #1a1a1a;
+    --footer-link-hover-color: white;
+    --footer-link-hover-bg: rgba(154, 157, 78, 0.2);
+    --footer-link-hover-shadow: rgba(154, 157, 78, 0.5);
+}
+
+/************ GLOBAL STYLES ************/
 * {
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* BARRA DE NAVEGAÇÃO */
+/************ NAVBAR ************/
 .nav {
-    background: linear-gradient(to right, #ffffff, #5e5e55, #ffffff);
+    background: var(--nav-gradient);
     top: 0;
     left: 0;
     right: 0;
@@ -15,20 +85,19 @@
 }
 
 .nav a {
-    color: #1a1a1a;
+    color: var(--nav-link-color);
     text-decoration: none;
     padding: 0px 20px;
-    font: 5pt;
     font-weight: bold;
-    transition: all 0.5s ease-in-out;
     font-size: 15pt;
+    transition: all 0.5s ease-in-out;
 }
 
 .nav a:hover {
-    color: white;
-    background: #9a9d4e33;
+    color: var(--nav-link-hover-color);
+    background: var(--nav-link-hover-bg);
     border-radius: 5px;
-    box-shadow: 0 0 5px #9a9d4e80;
+    box-shadow: 0 0 5px var(--nav-link-hover-shadow);
 }
 
 .nav-list {
@@ -37,21 +106,20 @@
     margin-left: 20px;
 }
 
-/* TEXT SELECTION STYLES */
+/************ TEXT SELECTION ************/
 ::selection {
-    color: black;
-    background-color: #9a9d4e33;
+    color: var(--selection-color);
+    background-color: var(--selection-bg);
 }
 
-/* LOADING SCREEN */
-
+/************ LOADING SCREEN ************/
 #loading-screen {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
-    background: linear-gradient(black, #1a1a1a);
+    background: var(--loading-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,8 +131,7 @@
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    border-radius: 50%;
-    box-shadow: 4px 0 0 #9a9d4e;
+    box-shadow: 4px 0 0 var(--loading-shadow);
     animation: anima 1s linear infinite;
 }
 
@@ -72,33 +139,29 @@
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    color: #9a9d4e;
+    color: var(--loading-shadow);
     position: fixed;
     text-transform: uppercase;
     text-align: center;
     line-height: 300px;
     font-size: 32px;
     background: url("../arq/img/Thauã-Logo-GPT.png") no-repeat center/cover;
-    box-shadow: 0 0 5px #9a9d4e;
+    box-shadow: 0 0 5px var(--loading-shadow);
 }
 
 @keyframes anima {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-/* MAIN BODY */
+/************ MAIN BODY ************/
 .Current-body {
-    background: linear-gradient(to right, #000000, #1a1a1a, #000000);
+    background: var(--main-bg);
     min-height: 100vh;
     margin-bottom: 100px;
 }
 
-/* HEADER */
+/************ HEADER ************/
 header {
     padding: 30px;
     display: flex;
@@ -113,18 +176,18 @@ header {
     margin: 0;
     font-size: 24pt;
     font-weight: bold;
-    filter: drop-shadow(0 0 15px #ffffff);
+    filter: drop-shadow(0 0 15px var(--logo-shadow));
 }
 
-/* TEXTO FUTURO DESENVOLVEDOR DE SOFTWARE */
+/************ FUTURO SOFTWARE ************/
 .futuro-software {
-    color: green;
+    color: var(--futuro-color);
     font-weight: bold;
     font-size: 30px;
     padding: 15px;
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
-    background-color: #1a1a1a;
+    background-color: var(--futuro-bg);
     border-radius: 15px;
     width: fit-content;
     margin: 20px auto 0;
@@ -137,8 +200,7 @@ header {
 
 @keyframes blink { 50% { opacity: 0; } }
 
-/* DIV CONTAINER */
-
+/************ DIV CONTAINER ************/
 .about-container {
     display: flex;
     justify-content: center;
@@ -148,7 +210,7 @@ header {
     max-width: 1000px;
 }
 
-/* DIV ABOUT ME */
+/************ DIV ABOUT ME ************/
 .div-about {
     animation: slideIn 3s forwards;
     margin: 50px;
@@ -160,40 +222,33 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 1.5;
-    box-shadow: 0 0 10px #5e5e55;
-    background-color: #5e5e55cc;
-    color: white;
+    box-shadow: 0 0 10px var(--div-about-shadow);
+    background-color: var(--div-about-bg);
+    color: var(--div-about-color);
     border-radius: 20px;
     overflow: auto; 
 }
 
-/* ANIMAÇÃO DE SLIDE */
 @keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
 
-/* IMAGEM TULIO */
+/************ IMAGEM TULIO ************/
 .img-tulio {
     width: 250px;
     height: auto;
     border-radius: 30px;
-    box-shadow: 0 0 10px #5e5e55;
+    box-shadow: 0 0 10px var(--img-shadow);
     transition: transform 0.3s ease-in-out;
 }
+
 .img-tulio:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
 
-/* DIV HABILIDADES */
-
+/************ DIV HABILIDADES ************/
 #div-habilidades {
     text-align: center;
     gap: 20px;
@@ -217,11 +272,10 @@ header {
     font-size: 20pt;
     margin-bottom: 20px;
     font-weight: bold;
-    text-decoration: none;
     text-align: center;
 }
 
-/* DIV DOS PROJETOS */
+/************ DIV PROJETOS ************/
 #div-projetos {
     margin: 0;
     margin-top: 20px;
@@ -232,7 +286,7 @@ header {
 
 .projeto1 {
     color: white;
-    background-color: #1b202a;
+    background-color: var(--projeto1-bg);
     gap: 20px;
     margin-top: 50px;
     margin: 0;
@@ -246,25 +300,13 @@ header {
 
 .projeto1:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 10px #ffffff;
+    box-shadow: 0 0 10px var(--projeto1-hover-shadow);
     cursor: default;
-}
-
-.projeto2:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 10px #dc9223;
-    cursor: default;
-}
-
-.projeto1 img,
-.projeto2 img {
-    margin-top: 20px;
-    width: 300px;
 }
 
 .projeto2 {
     color: white;
-    background-color: #1c180f;
+    background-color: var(--projeto2-bg);
     width: 300px;
     height: 350px;
     margin: 0;
@@ -274,9 +316,17 @@ header {
     text-align: center;
 }
 
-/* BOTAO VER PROJETO */
+.projeto2:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px var(--projeto2-hover-shadow);
+    cursor: default;
+}
+
+.projeto1 img, .projeto2 img { margin-top: 20px; width: 300px;}
+
+/************ BOTÃO VER PROJETO ************/
 .button-link {
-    background-color: #1a1a1a;
+    background-color: var(--button-bg);
     display: inline-block;
     line-height: 40px;
     margin-top: 20px;
@@ -289,13 +339,12 @@ header {
 
 .button-link:hover {
     transform: scale(1.1);
-    background-color: #000000;
+    background-color: var(--button-hover-bg);
     opacity: 0.8;
     cursor: pointer;
 }
 
-/* DIV EXPERIÊNCIA */
-
+/************ DIV EXPERIÊNCIA ************/
 #div-experiencia {
     margin: 0;
     margin-top: 10px;
@@ -305,8 +354,8 @@ header {
 }
 
 .exp1 {
-    color: white;
-    background-color: #04182f;
+    color: var(--exp-color);
+    background-color: var(--exp-bg);
     margin-top: 20px;
     font-size: 12px;
     margin: 0px;
@@ -321,20 +370,19 @@ header {
 
 .exp1:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 10px #ffffff;
+    box-shadow: 0 0 10px var(--exp-hover-shadow);
     cursor: crosshair;
-    filter: drop-shadow(0 0 10px #dc3523);
+    filter: drop-shadow(0 0 10px var(--exp-hover-filter));
 }
 
 .exp1 h3 {
     font-size: 17pt;
     margin-bottom: 20px;
     font-weight: bold;
-    text-decoration: none;
     text-align: center;
 }
 
-.exp1 img{
+.exp1 img {
     margin: 0px 100px 0px;
     display: block;
     width: 100px;
@@ -349,8 +397,8 @@ header {
 }
 
 .exp1-competencia p {
-    background-color: #ffffff;
-    color: black;
+    background-color: var(--exp-competencia-bg);
+    color: var(--exp-competencia-color);
     padding: 5px 10px;
     display: flex;
     justify-content: center;
@@ -359,15 +407,15 @@ header {
     text-align: center; 
 }
 
-/* DIV CONTATO */
+/************ DIV CONTATO ************/
 #helloWorld {
-    color: green;
+    color: var(--contato-color);
     font-weight: bold;
     font-size: 30px;
     padding: 15px;
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
-    background-color: #1a1a1a;
+    background-color: var(--contato-bg);
     border-radius: 15px;
     width: fit-content;
     margin: 80px auto 0;
@@ -381,7 +429,6 @@ header {
     text-decoration: none;
     display: flex;
     justify-content: center;
-    
 }
 
 .div-contatos img {
@@ -394,12 +441,12 @@ header {
 .div-contatos img:hover {
     transform: scale(1.2);
     text-align: center;
-    filter: drop-shadow(0 0 10px #23dc2c);
+    filter: drop-shadow(0 0 10px var(--contato-hover-shadow));
 }
 
-/* MAIN FOOTER */
+/************ FOOTER ************/
 footer {
-    background: linear-gradient(to right, #ffffff, #5e5e55, #ffffff);
+    background: var(--footer-bg);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -409,11 +456,11 @@ footer {
 
 footer a {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     text-align: center;
-    color: #1a1a1a;
+    color: var(--footer-link-color);
     font-style: italic;
     height: 100%;
     font-weight: bold;
@@ -421,93 +468,31 @@ footer a {
 }
 
 footer a:hover {
-    color: white;
-    background: rgba(154, 157, 78, 0.2);
+    color: var(--footer-link-hover-color);
+    background: var(--footer-link-hover-bg);
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(154, 157, 78, 0.5);
+    box-shadow: 0 0 5px var(--footer-link-hover-shadow);
 }
 
-/* --- Desktop (mais de 900px de largura) --- */
+/************ MEDIA QUERIES ************/
 @media (max-width: 900px) {
-    .nav-list {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-    }
-
-    .div-about {
-        width: 90%;
-        margin: 20px auto;
-    }
-
-    .img-tulio {
-        width: 200px;
-    }
-
-    #div-habilidades img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .projeto1, .projeto2 {
-        width: 90%;
-        margin: 20px auto;
-    }
-
-    .exp1 {
-        width: 90%;
-        margin: 20px auto;
-    }
-
-    .div-contatos {
-        flex-direction: column;
-        gap: 20px;
-    }
+    .nav-list { flex-direction: column; align-items: center; margin-left: 0; }
+    .div-about { width: 90%; margin: 20px auto; }
+    .img-tulio { width: 200px; }
+    #div-habilidades img { width: 40px; height: 40px; }
+    .projeto1, .projeto2 { width: 90%; margin: 20px auto; }
+    .exp1 { width: 90%; margin: 20px auto; }
+    .div-contatos { flex-direction: column; gap: 20px; }
 }
 
-/* --- Celular (até 600px de largura) --- */
 @media (max-width: 600px) {
-    .nav {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .nav a {
-        font-size: 12pt;
-        padding: 10px;
-    }
-
-    .futuro-software {
-        font-size: 20px;
-        padding: 10px;
-    }
-
-    .div-about {
-        font-size: 14px;
-        padding: 20px;
-    }
-
-    .img-tulio {
-        width: 150px;
-    }
-
-    #div-habilidades img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .projeto1, .projeto2 {
-        width: 100%;
-        margin: 10px auto;
-    }
-
-    .exp1 {
-        font-size: 10px;
-        padding: 20px;
-    }
-
-    .div-contatos img {
-        width: 40px;
-        height: 40px;
-    }
+    .nav { flex-direction: column; padding: 10px; }
+    .nav a { font-size: 12pt; padding: 10px; }
+    .futuro-software { font-size: 20px; padding: 10px; }
+    .div-about { font-size: 14px; padding: 20px; }
+    .img-tulio { width: 150px; }
+    #div-habilidades img { width: 30px; height: 30px; }
+    .projeto1, .projeto2 { width: 100%; margin: 10px auto; }
+    .exp1 { font-size: 10px; padding: 20px; }
+    .div-contatos img { width: 40px; height: 40px; }
 }
