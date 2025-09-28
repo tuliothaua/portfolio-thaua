@@ -9,12 +9,12 @@
     /* NAVBAR COLORS */
     --nav-gradient: linear-gradient(to right, #ffffff, #5e5e55, #ffffff);
     --nav-link-color: #1a1a1a;
-    --nav-link-hover-bg: rgba(154, 157, 78, 0.2);
+    --nav-link-hover-bg: #9a9d4e33;
     --nav-link-hover-color: white;
-    --nav-link-hover-shadow: rgba(154, 157, 78, 0.5);
+    --nav-link-hover-shadow: #9a9d4e80;
 
     /* TEXT SELECTION */
-    --selection-bg: rgba(154, 157, 78, 0.2);
+    --selection-bg: #9a9d4e33;
     --selection-color: black;
 
     /* LOADING SCREEN */
@@ -32,7 +32,7 @@
     --futuro-color: green;
 
     /* DIV ABOUT */
-    --div-about-bg: rgba(94, 94, 85, 0.8);
+    --div-about-bg: #5e5e55cc;
     --div-about-shadow: #5e5e55;
     --div-about-color: white;
 
@@ -64,8 +64,8 @@
     --footer-bg: linear-gradient(to right, #ffffff, #5e5e55, #ffffff);
     --footer-link-color: #1a1a1a;
     --footer-link-hover-color: white;
-    --footer-link-hover-bg: rgba(154, 157, 78, 0.2);
-    --footer-link-hover-shadow: rgba(154, 157, 78, 0.5);
+    --footer-link-hover-bg: #9a9d4e33;
+    --footer-link-hover-shadow: #9a9d4e80;
 }
 
 /************ GLOBAL STYLES ************/
