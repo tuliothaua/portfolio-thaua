@@ -1,7 +1,8 @@
-/*********** RESET VARIABLES ***********/
+/************ GLOBAL STYLES ************/
 * {
     margin: 0;
     padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /************ ROOT VARIABLES ************/
@@ -66,13 +67,6 @@
     --footer-link-hover-color: white;
     --footer-link-hover-bg: #9a9d4e33;
     --footer-link-hover-shadow: #9a9d4e80;
-}
-
-/************ GLOBAL STYLES ************/
-* {
-    margin: 0;
-    padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /************ NAVBAR ************/
@@ -222,11 +216,21 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 1.5;
+    border-right: 10px solid var(--button-bg);
+    border-bottom: 10px solid var(--button-bg);
     box-shadow: 0 0 10px var(--div-about-shadow);
     background-color: var(--div-about-bg);
     color: var(--div-about-color);
     border-radius: 20px;
     overflow: auto; 
+    transition: all 0.3s ease-in-out;
+}
+
+.div-about:hover {
+    border-right: 10px solid #ffffff85;
+    border-bottom: 10px solid #ffffff85;
+    
+    transition: all 0.3s ease-in-out;
 }
 
 @keyframes slideIn {
@@ -236,16 +240,20 @@ header {
 
 /************ IMAGEM TULIO ************/
 .img-tulio {
-    width: 250px;
+    width: 270px;
     height: auto;
     border-radius: 30px;
     box-shadow: 0 0 10px var(--img-shadow);
-    transition: transform 0.3s ease-in-out;
+    border-left: 10px solid var(--button-bg);
+    border-bottom: 10px solid var(--button-bg);
+    transition: all 0.3s ease-in-out;
 }
 
 .img-tulio:hover {
     transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-left: 10px solid #ffffff85;
+    border-bottom: 10px solid #ffffff85;
 }
 
 /************ DIV HABILIDADES ************/
