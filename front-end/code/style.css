@@ -340,8 +340,11 @@ header {
     margin-top: 20px;
     text-decoration: none;
     color: white;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 5px;
+    border-left: 8px solid white;
+    border-right: 8px solid white;
+    border-bottom: 8px solid var(--div-about-shadow);
     transition: all 0.3s ease-in-out;
 }
 
@@ -350,6 +353,9 @@ header {
     background-color: var(--button-hover-bg);
     opacity: 0.8;
     cursor: pointer;
+    border-right: 10px solid var(--footer-link-color);
+    border-left: 10px solid var(--footer-link-color);
+    border-bottom: 10px solid var(--footer-link-color);
 }
 
 /************ DIV EXPERIÊNCIA ************/
