@@ -1,16 +1,20 @@
 /* SCRIPT JAVASCRIPT */
 
 //BARRA DE NAV
-const nav = document.querySelector(".nav");
-window.addEventListener("scroll", fixNav);
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+const closeMenu = document.getElementById("closeMenu");
 
-function fixNav() {
-    if (window.scrollY > nav.offsetHeight + 150) {
-        nav.classList.add("active");
-    } else {
-        nav.classList.remove("active");
-    }
-}
+hamburger.addEventListener("click", () => {
+    navMenu.classList.add("open");
+});
+
+closeMenu.addEventListener("click", () => {
+    navMenu.classList.remove("open");
+});
+
+
+
 
 /* AUDIO WICK */
 const audioWick = document.querySelector("#audwick");

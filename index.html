@@ -11,27 +11,47 @@
     
     <!-- LOADING SCREEN -->
     <div id="loading-screen">
-        <div class="loading-img" alt=""CARREGANDO></div>
+        <div class="loading-img" aria-label="Carregando..."></div>
         <div class="anima"></div>
     </div>
     
-    <!--HEADER THAUÃ-->
-    <nav class="nav">
-        <header> 
-            <a href="">☰&nbsp;MENU</a>
+    <header class="nav" style="margin-bottom: 20px;">
+        <!-- Desktop -->
+        <div class="nav-desktop">
+            <a href="#" class="logo">☰&nbsp;MENU</a>
             <a class="logo" href="#">Túlio&nbsp;Thauã&nbsp;Dutra</a>
             <ul class="nav-list">
-                <li><a href="#projetos">︽ PROJETOS</a></li>
+                <li><a href="#projetos">PROJETOS</a></li>
                 <li><a href="#experiencia">EXPERIÊNCIA</a></li>
                 <li><a href="#contato">CONTATO</a></li>
             </ul>
-        </header>
-    </nav>
+        </div>
+
+        <!-- Mobile -->
+        <div class="nav-mobile">
+            <a href="#">TÚLIO&nbsp;T.&nbsp;DUTRA</a>
+            <div class="hamburger" id="hamburger">☰&nbsp;MENU</div>
+        </div>
+
+        <!-- Painel lateral mobile -->
+        <div class="nav-menu" id="navMenu">
+            <button class="nav-close" id="closeMenu">&times;</button>
+            <ul class="nav-links">
+                <li><a href="#projetos">PROJETOS</a></li>
+                <li><a href="#experiencia">EXPERIÊNCIA</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+
+
 
     <!-- MAIN CONTENT -->
     <main> 
         <!--SOBRE MIM THAUÃ-->
-        <h1 class="futuro-software">...</h1>
+        <h1 style="margin-top: 100px;" class="futuro-software">...</h1>
         <div class="about-container" id="Sobre">
             <img src="front-end/arq/img/tulioimg.jpg" alt="tulioimg" class="img-tulio">
             <div class="div-about">
@@ -134,7 +154,7 @@
 
 
     <!-- SCRIPT JAVASCRIPT -->
-    <audio id="audwick" autoplay> 
+    <audio id="audwick" autoplay>
         <source src="front-end/arq/aud/John Wick Tension No Copyright Background Music ⧸ Red.mp3" type="audio/mp3"> Seu navegador não suporta áudio.
     </audio>
     
