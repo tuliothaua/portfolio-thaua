@@ -13,7 +13,12 @@ closeMenu.addEventListener("click", () => {
     navMenu.classList.remove("open");
 });
 
+// Aba de Menu
+const menu = document.querySelector(".logo")
 
+function toggleMenu() {
+    alert("Menu em desenvolvimento! Em breve estará disponível.");
+}
 
 
 /* AUDIO WICK */
