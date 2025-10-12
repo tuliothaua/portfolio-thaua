@@ -166,13 +166,37 @@ header {
     align-items: center;
 }
 
+.logo-title {
+    cursor: default;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 15pt;
+    filter: drop-shadow(0 0 15px var(--logo-shadow));
+    transition: all 0.3s ease-in-out;
+}
+
 .logo {
     cursor: default;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-weight: bold;
+    font-size: 15pt;
     filter: drop-shadow(0 0 15px var(--logo-shadow));
+    text-decoration: none;
+    border: none;  
+    padding: 0 20px;
+    transition: all 0.3s ease-in-out; 
 }
+
+.logo:hover {
+    color: var(--nav-link-hover-color);
+    background: var(--nav-link-hover-bg);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--nav-link-hover-shadow);
+    transition: all 0.3s ease-in-out; 
+}
+
 
 /************ FUTURO SOFTWARE ************/
 .futuro-software {
