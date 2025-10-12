@@ -44,7 +44,7 @@
     --projeto1-bg: #1b202a;
     --projeto2-bg: #1c180f;
     --projeto1-hover-shadow: #ffffff;
-    --projeto2-hover-shadow: #dc9223;
+    --projeto2-hover-shadow: #d7a860;
     --button-bg: #1a1a1a;
     --button-hover-bg: #000000;
 
@@ -227,13 +227,6 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
-.div-about:hover {
-    border-right: 10px solid #ffffff85;
-    border-bottom: 10px solid #ffffff85;
-    
-    transition: all 0.3s ease-in-out;
-}
-
 @keyframes slideIn {
     from { transform: translateX(-100%); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
@@ -250,7 +243,7 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
-.img-tulio:hover {
+.img-tulio:active {
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
     border-left: 10px solid #ffffff85;
@@ -287,10 +280,8 @@ header {
 /************ DIV PROJETOS ************/
 #div-projetos {
     margin: 0;
-    
     justify-content: center;
     gap: 50px;
-    
     display: flex;
 }
 
@@ -312,6 +303,10 @@ header {
     cursor: default;
 }
 
+.projeto1:active,.projeto2:active {
+    background-color: var(--contato-bg);
+}
+
 .projeto2 {
     color: white;
     background-color: var(--projeto2-bg);
@@ -329,9 +324,24 @@ header {
     cursor: default;
 }
 
-.projeto1 h3, .projeto2 h3 {
+.projeto1 h3 {
     font-weight: bold;
     text-align: center;
+    background-color: var(--projeto1-hover-shadow);
+    padding: 5px;
+    color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+
+.projeto2 h3 {
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--projeto2-hover-shadow);
+    padding: 5px;
+    color: #1c180f;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
 }
 
 .projeto1 img, .projeto2 img { margin-top: 20px; width: 300px;}
