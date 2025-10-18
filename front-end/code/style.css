@@ -41,10 +41,8 @@
     --img-shadow: #5e5e55;
 
     /* PROJETOS */
-    --projeto1-bg: #1b202a;
-    --projeto2-bg: #1c180f;
     --projeto1-hover-shadow: #ffffff;
-    --projeto2-hover-shadow: #d7a860;
+    --projeto2-hover-shadow: #ffffff;
     --button-bg: #1a1a1a;
     --button-hover-bg: #000000;
 
@@ -261,10 +259,10 @@ header {
     width: 270px;
     height: auto;
     border-radius: 30px;
+    transition: all 0.3s ease-in-out;
     box-shadow: 0 0 10px var(--img-shadow);
     border-left: 10px solid var(--button-bg);
     border-bottom: 10px solid var(--button-bg);
-    transition: all 0.3s ease-in-out;
 }
 
 .img-tulio:active {
@@ -304,14 +302,14 @@ header {
 /************ DIV PROJETOS ************/
 #div-projetos {
     margin: 0;
-    justify-content: center;
     gap: 50px;
     display: flex;
+    justify-content: center;
 }
 
 .projeto1 {
     color: white;
-    background-color: var(--projeto1-bg);
+    border: white 3px solid;
     gap: 20px;
     padding: 20px;
     width: 300px;
@@ -321,19 +319,9 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
-.projeto1:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 10px var(--projeto1-hover-shadow);
-    cursor: default;
-}
-
-.projeto1:active,.projeto2:active {
-    background-color: var(--contato-bg);
-}
-
 .projeto2 {
     color: white;
-    background-color: var(--projeto2-bg);
+    border: white 3px solid;
     width: 300px;
     height: 350px;
     padding: 20px;
@@ -342,30 +330,40 @@ header {
     text-align: center;
 }
 
+.projeto1 h3 {
+    padding: 5px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    background-color: var(--projeto1-hover-shadow);
+}
+
+.projeto2 h3 {
+    padding: 5px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    background-color: var(--projeto2-hover-shadow);
+}
+
+.projeto1:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px var(--projeto1-hover-shadow);
+    cursor: default;
+}
+
 .projeto2:hover {
     transform: scale(1.03);
     box-shadow: 0 0 10px var(--projeto2-hover-shadow);
     cursor: default;
 }
 
-.projeto1 h3 {
-    font-weight: bold;
-    text-align: center;
-    background-color: var(--projeto1-hover-shadow);
-    padding: 5px;
-    color: #000000;
-    border-radius: 10px;
-    box-shadow: 0 0 10px black;
-}
-
-.projeto2 h3 {
-    font-weight: bold;
-    text-align: center;
-    background-color: var(--projeto2-hover-shadow);
-    padding: 5px;
-    color: #1c180f;
-    box-shadow: 0 0 10px black;
-    border-radius: 10px;
+.projeto1:active,.projeto2:active {
+    background-color: var(--contato-bg);
 }
 
 .projeto1 img, .projeto2 img { margin-top: 20px; width: 300px;}
