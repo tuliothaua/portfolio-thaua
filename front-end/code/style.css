@@ -175,23 +175,21 @@ header {
 }
 
 .logo {
-    cursor: default;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-weight: bold;
-    font-size: 15pt;
-    filter: drop-shadow(0 0 15px var(--logo-shadow));
-    text-decoration: none;
     border: none;  
-    padding: 0 20px;
+    font-size: 15pt;
+    cursor: default;
+    padding: 0 30px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
     transition: all 0.3s ease-in-out; 
+    filter: drop-shadow(0 0 15px var(--logo-shadow));
 }
 
 .logo:hover {
     color: var(--nav-link-hover-color);
     background: var(--nav-link-hover-bg);
-    border-radius: 5px;
-    box-shadow: 0 0 5px var(--nav-link-hover-shadow);
     transition: all 0.3s ease-in-out; 
 }
 
