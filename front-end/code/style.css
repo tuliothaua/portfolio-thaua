@@ -47,7 +47,7 @@
     --button-hover-bg: #000000;
 
     /* EXPERIÊNCIA */
-    --exp-bg: #04182f;
+    --exp-bg: #1f1f1f;
     --exp-hover-shadow: #ffffff;
     --exp-hover-filter: #dc3523;
     --exp-color: white;
@@ -395,63 +395,63 @@ header {
 /************ DIV EXPERIÊNCIA ************/
 #div-experiencia {
     margin: 0;
-    margin-top: 10px;
-    justify-content: center;
     gap: 50px;
     display: flex;
+    margin-top: 10px;
+    justify-content: center;
 }
 
 .exp1 {
-    color: var(--exp-color);
-    background-color: var(--exp-bg);
-    margin-top: 20px;
-    font-size: 12px;
-    padding: 40px;
-    width: 300px;
     height: auto;
-    border-radius: 20px;
-    text-align: center;
+    width: 300px;
+    padding: 30px;
+    font-size: 12px;
+    margin-top: 10px;
     line-height: 1.5;
+    text-align: center;
+    border-radius: 20px;
+    color: var(--exp-color);
+    border: gray 5px solid;
+    background-color: var(--exp-bg);
     transition: all 0.3s ease-in-out;
 }
 
 .exp1:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 10px var(--exp-hover-shadow);
     cursor: crosshair;
-    filter: drop-shadow(0 0 10px var(--exp-hover-filter));
+    transform: scale(1.03);
+    box-shadow: 0 0 10px gray;
 }
 
 .exp1 h3 {
     font-size: 17pt;
-    margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .exp1 img {
-    margin: 0px 100px 0px;
-    display: block;
     width: 100px;
+    display: block;
     border-radius: 20%;
+    margin: 0px 100px 0px;
 }
 
 .exp1-competencia {
-    display: flex; 
     gap: 10px; 
+    display: flex; 
     flex-wrap: wrap; 
     margin-top: 10px;
 }
 
 .exp1-competencia p {
-    background-color: var(--exp-competencia-bg);
-    color: var(--exp-competencia-color);
-    padding: 5px 10px;
     display: flex;
-    justify-content: center;
-    border-radius: 20px;
     font-size: 10pt;
+    padding: 5px 10px;
     text-align: center; 
+    border-radius: 20px;
+    justify-content: center;
+    color: var(--exp-competencia-color);
+    background-color: var(--exp-competencia-bg);
 }
 
 /************ DIV CONTATO ************/
