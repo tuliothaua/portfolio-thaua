@@ -82,7 +82,7 @@
 .nav a {
     color: var(--nav-link-color);
     text-decoration: none;
-    padding: 0px 30px;
+    padding: 5px 30px 5px 30px;
     font-weight: bold;
     font-size: 15pt;
     transition: all 0.5s ease-in-out;
@@ -99,6 +99,7 @@
     list-style: none;
     display: flex;
     margin-left: 20px;
+    padding: 5px 30px 5px 30px;
 }
 
 /************ TEXT SELECTION ************/
@@ -164,26 +165,23 @@ header {
     align-items: center;
 }
 
-.logo-title {
+.logo-title { /**TULIO-THAUA-DUTRA**/
     cursor: default;
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-weight: bold;
-    font-size: 15pt;
     filter: drop-shadow(0 0 15px var(--logo-shadow));
-    transition: all 0.3s ease-in-out;
 }
 
-.logo {
-    border: none;  
+.logo { /**MENU**/
+    border: none;
     font-size: 15pt;
-    cursor: default;
-    padding: 0 30px;
+    cursor: pointer;
+    padding: 5px 30px 5px 30px;
     font-weight: bold;
     letter-spacing: 5px;
     border-radius: 5px;
     text-transform: uppercase;
-    transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;
     filter: drop-shadow(0 0 15px var(--logo-shadow));
 }
 
@@ -254,8 +252,7 @@ header {
 
 /************ IMAGEM TULIO ************/
 .img-tulio {
-    width: 270px;
-    height: auto;
+    width: 100%; max-width: 270px;
     border-radius: 30px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 0 10px var(--img-shadow);
@@ -364,7 +361,12 @@ header {
     background-color: var(--contato-bg);
 }
 
-.projeto1 img, .projeto2 img { margin-top: 20px; width: 300px;}
+.projeto1 img, .projeto2 img {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
 
 /************ BOTÃO VER PROJETO ************/
 .button-link {
@@ -430,10 +432,10 @@ header {
 }
 
 .exp1 img {
-    width: 100px;
+    width: 100px; 
+    margin: 0 auto;
     display: block;
     border-radius: 20%;
-    margin: 0px 100px 0px;
 }
 
 .exp1-competencia {
@@ -526,7 +528,6 @@ footer a:hover {
 /* --- Ajuste Desktop --- */
 .nav-desktop {
   display: flex;
-  justify-content: flex;
   gap: 50px;
 }
 
