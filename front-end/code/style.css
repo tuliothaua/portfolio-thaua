@@ -85,6 +85,7 @@
     padding: 5px 30px 5px 30px;
     font-weight: bold;
     font-size: 15pt;
+    white-space: nowrap;
     transition: all 0.5s ease-in-out;
 }
 
@@ -268,6 +269,16 @@ header {
 }
 
 /************ DIV HABILIDADES ************/
+#habilidades {
+    text-align: center; 
+    color: white; 
+    background-color: #000000; 
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
 #div-habilidades {
     text-align: center;
     gap: 20px;
@@ -286,15 +297,16 @@ header {
     text-align: center;
 }
 
-#div-habilidades h2 {
+/************ DIV PROJETOS ************/
+#projetos {
+    text-align: center; 
     color: white;
-    font-size: 20pt;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-align: center;
+    background-color: #000000; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
 }
 
-/************ DIV PROJETOS ************/
 #div-projetos {
     margin: 0;
     gap: 50px;
@@ -395,6 +407,15 @@ header {
 }
 
 /************ DIV EXPERIÊNCIA ************/
+#experiencia {
+    text-align: center; 
+    color: white; 
+    background-color: #000000;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 20px;
+} 
+
 #div-experiencia {
     margin: 0;
     gap: 50px;
@@ -528,7 +549,11 @@ footer a:hover {
 /* --- Ajuste Desktop --- */
 .nav-desktop {
   display: flex;
+  justify-content: space-between;
   gap: 50px;
+  width: 100%;
+  max-width: 1100px;
+  flex-wrap: nowrap;
 }
 
 .nav-mobile,
