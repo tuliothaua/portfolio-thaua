@@ -497,6 +497,7 @@ header {
     text-align: center;
     gap: 50px;
     margin-top: 50px;
+    margin-bottom: 50px;
     padding: 10px auto;
     text-decoration: none;
     display: flex;
