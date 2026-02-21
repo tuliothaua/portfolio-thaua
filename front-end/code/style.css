@@ -294,7 +294,7 @@ header {
 
 #div-habilidades p {
     color: white;
-    font-size: 5px;
+    font-size: 15px;
     margin-top: 10px;
     
 }
@@ -330,22 +330,30 @@ header {
 
 .projeto1 {
     color: white;
-    border: white 3px solid;
+    border: white 5px solid;
     gap: 20px;
     padding: 20px;
+    background: linear-gradient(45deg, var(--button-hover-bg), var(--div-about-shadow), var(--button-hover-bg));
     width: 300px;
+    border-right: #686868 10px solid;
+    border-left: #686868 10px solid;
     height: 350px;
     border-radius: 20px;
     text-align: center;
+    padding-bottom: 90px;
     transition: all 0.3s ease-in-out;
 }
 
 .projeto2 {
     color: white;
-    border: white 3px solid;
+    border: white 5px solid;
+    border-right: #686868 10px solid;
+    border-left: #686868 10px solid;
     width: 300px;
+    background: linear-gradient(45deg, var(--button-hover-bg), var(--div-about-shadow), var(--button-hover-bg));
     height: 350px;
     padding: 20px;
+    padding-bottom: 90px;
     border-radius: 20px;
     transition: all 0.3s ease-in-out;
     text-align: center;
@@ -387,12 +395,65 @@ header {
     background-color: var(--contato-bg);
 }
 
-.projeto1 img, .projeto2 img {
+.projeto1 img {
   margin-top: 20px;
   width: 100%;
   max-width: 300px;
   height: auto;
 }
+
+.projeto2 img {
+  margin-top: 31px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.div-badge {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.badge-nodejs {
+    padding: 5px;
+    background: linear-gradient(45deg, #68a063, white, #68a063);
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+    width: fit-content;
+}
+
+.badge-javascript {
+    padding: 5px;
+    background: linear-gradient(45deg, #f0db4f, white, #f0db4f);
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+    width: fit-content;
+  }
+
+.badge-html {
+    padding: 5px;
+    background: linear-gradient(45deg, #e34c26, white, #e34c26);
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+    width: fit-content;
+  }
+
+.badge-css {
+    padding: 5px;
+    background: linear-gradient(45deg, aqua, white, aqua);
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+    width: fit-content;
+  }
+
 
 /************ BOTÃO VER PROJETO ************/
 .button-link {
@@ -665,6 +726,7 @@ footer a:hover {
   .futuro-software{
     font-size: 12px;
     width: 80%;
+    text-align: center;
     padding: 20px;
   }
 
@@ -696,7 +758,17 @@ footer a:hover {
 
   .projeto1, .projeto2 {
     width: 80%;
+    padding-bottom: 20%;
     height: auto;
+
+  }
+
+  .div-badge {
+    flex-direction: column;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   #div-experiencia {
@@ -717,5 +789,6 @@ footer a:hover {
     font-size: 20px;
     width: 80%;
     padding: 20px;
+    text-align: center;
   }
 }
