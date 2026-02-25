@@ -1,6 +1,6 @@
-/* SCRIPT JAVASCRIPT */
+/************ TULIO-JAVASCRIPT ************/
 
-//BARRA DE NAV
+/************ BARRA DE NAVEGAÇÃO ************/
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("navMenu");
 const closeMenu = document.getElementById("closeMenu");
@@ -13,7 +13,7 @@ closeMenu.addEventListener("click", () => {
     navMenu.classList.remove("open");
 });
 
-// Aba de Menu
+/************ ABA DE MENU ************/
 const menu = document.querySelector(".logo")
 
 function toggleMenu() {
@@ -21,19 +21,18 @@ function toggleMenu() {
 }
 
 
-/* AUDIO WICK */
+/************ AUDIO WICK ************/
 const audioWick = document.querySelector("#audwick");
 
 audioWick.volume = 0.1;
 audioWick.autoplay = true;
 audioWick.play().catch(() => {});
 
-/* LOADING SCREEN */
-
+/************ LOADING SCREEN ************/
 window.addEventListener("load", function () {
-    const loadingElement = document.querySelector("#loading-screen");
+const loadingElement = document.querySelector("#loading-screen");
 
-    // Verifica se o elemento de carregamento existe
+    /* --- Verifica se o elemento de carregamento existe --- */
     if (loadingElement) {
         setTimeout(() => {
             loadingElement.style.transition = "opacity 2s";
@@ -45,20 +44,20 @@ window.addEventListener("load", function () {
     }
 });
 
-// TEXTO [DESENVOLVEDOR DE SOFTWARE ▯]
+/************ TEXTO [DESENVOLVEDOR DE SOFTWARE ▯] ************/
 const developerText = document.querySelector(".futuro-software");
 if (developerText) {
     const text = "[> Futuro Desenvolvedor de Software <]...";
     let index = 0;
     const speed = 200;
 
-    // Função para digitar o texto
+    /* --- Função para digitar o texto --- */
     function typeText() {
         if (index < text.length) {
             developerText.textContent += text[index++];
             setTimeout(typeText, speed);
         } else {
-            // Adiciona o cursor piscante após o texto ser completamente digitado
+        /* --- Adiciona o cursor piscante após o texto ser completamente digitado --- */
             const cursor = document.createElement("span");
             cursor.textContent = "▯";
             cursor.classList.add("blinking-cursor");
@@ -69,7 +68,7 @@ if (developerText) {
     typeText();
 }
 
-// Seleciona o elemento onde o texto será exibido
+/************ Seleciona o elemento onde o texto será exibido ************/
 const helloWorldContact = document.querySelector("#helloWorld");
 
 // Verifica se o elemento existe na página
@@ -78,7 +77,7 @@ if (helloWorldContact) {
     let index = 0;
     const speed = 150; 
 
-    // Função para digitar o texto
+    /* --- Função para digitar o texto --- */
     function typeText() {
         if (index < text.length) {
          
@@ -86,21 +85,20 @@ if (helloWorldContact) {
             index++; 
             setTimeout(typeText, speed); 
         } else {
-            // Adiciona o cursor piscante após o texto ser completamente digitado
+        /* --- Adiciona o cursor piscante após o texto ser completamente digitado --- */
             const cursor = document.createElement("span");
             cursor.textContent = "▯";
             cursor.classList.add("blinking-cursor");
             helloWorldContact.appendChild(cursor);
         }
     }
-
-    // Função para verificar se o elemento está visível na tela
+    /* --- Função para verificar se o elemento está visível na tela --- */
     function isElementVisible() {
         const rect = helloWorldContact.getBoundingClientRect();
         return rect.top < window.innerHeight && rect.bottom > 0;
     }
 
-    // Função que inicia a animação quando o elemento aparece na tela
+    /* --- Função que inicia a animação quando o elemento aparece na tela --- */
     function startTypingWhenVisible() {
         if (isElementVisible()) {
             typeText(); 
@@ -108,6 +106,6 @@ if (helloWorldContact) {
         }
     }
 
-    // Adiciona um evento para verificar o scroll da página
+    /* --- Adiciona um evento para verificar o scroll da página --- */
     window.addEventListener("scroll", startTypingWhenVisible);
 }
