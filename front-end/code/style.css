@@ -6,26 +6,26 @@
 }
 
 html, body {
-    overflow-x: hidden; 
     overflow-y: auto;
+    overflow-x: hidden; 
 }
 
 /************ ROOT VARIABLES ************/
 :root {
     /* NAVBAR COLORS */
-    --nav-gradient: linear-gradient(to right, #ffffff, #5e5e55, #ffffff);
     --nav-link-color: #1a1a1a;
-    --nav-link-hover-bg: #9a9d4e33;
     --nav-link-hover-color: white;
+    --nav-link-hover-bg: #9a9d4e33;
     --nav-link-hover-shadow: #9a9d4e80;
+    --nav-gradient: linear-gradient(to right, #ffffff, #5e5e55, #ffffff);
 
     /* TEXT SELECTION */
-    --selection-bg: #9a9d4e33;
     --selection-color: black;
+    --selection-bg: #9a9d4e33;
 
     /* LOADING SCREEN */
-    --loading-bg: linear-gradient(black, #1a1a1a);
     --loading-shadow: #9a9d4e;
+    --loading-bg: linear-gradient(black, #1a1a1a);
 
     /* MAIN BODY */
     --main-bg: linear-gradient(to right, #000000, #1a1a1a, #000000);
@@ -38,24 +38,26 @@ html, body {
     --futuro-color: green;
 
     /* DIV ABOUT */
+    --div-about-color: white;
     --div-about-bg: #5e5e55cc;
     --div-about-shadow: #5e5e55;
-    --div-about-color: white;
-
+    
     /* IMAGES */
     --img-shadow: #5e5e55;
 
     /* PROJETOS */
-    --projeto1-hover-shadow: #ffffff;
-    --projeto2-hover-shadow: #ffffff;
     --button-bg: #1a1a1a;
     --button-hover-bg: #000000;
+    --projetos-border: #686868;
+    --projeto1-hover-shadow: #ffffff;
+    --projeto2-hover-shadow: #ffffff;
+    --projetos-bg: linear-gradient(45deg, #000000, #5e5e55, #000000);
 
     /* EXPERIÊNCIA */
     --exp-bg: #1f1f1f;
+    --exp-color: white;
     --exp-hover-shadow: #ffffff;
     --exp-hover-filter: #dc3523;
-    --exp-color: white;
     --exp-competencia-bg: #ffffff;
     --exp-competencia-color: black;
 
@@ -65,42 +67,45 @@ html, body {
     --contato-hover-shadow: #23dc2c;
 
     /* FOOTER */
-    --footer-bg: linear-gradient(to right, #ffffff, #5e5e55, #ffffff);
     --footer-link-color: #1a1a1a;
     --footer-link-hover-color: white;
     --footer-link-hover-bg: #9a9d4e33;
     --footer-link-hover-shadow: #9a9d4e80;
+    --footer-bg: linear-gradient(to right, #ffffff, #5e5e55, #ffffff);
+
+    /* AUDIO */
+    --audio-bg: #23dc2c;
 }
 
 /************ NAVBAR ************/
 .nav {
-    background: var(--nav-gradient);
     height: 90px; 
     padding: 0 20px;  
     align-items: center;
+    background: var(--nav-gradient);
     box-shadow: 0 2px 10px #0000004d;
 }
 
 .nav a {
-    color: var(--nav-link-color);
+    font-size: 15pt;
+    font-weight: bold;
+    white-space: nowrap;
     text-decoration: none;
     padding: 5px 30px 5px 30px;
-    font-weight: bold;
-    font-size: 15pt;
-    white-space: nowrap;
+    color: var(--nav-link-color);
     transition: all 0.5s ease-in-out;
 }
 
 .nav a:hover {
+    border-radius: 5px;
     color: var(--nav-link-hover-color);
     background: var(--nav-link-hover-bg);
-    border-radius: 5px;
     box-shadow: 0 0 5px var(--nav-link-hover-shadow);
 }
 
 .nav-list {
-    list-style: none;
     display: flex;
+    list-style: none;
     margin-left: 20px;
     padding: 5px 30px 5px 30px;
 }
@@ -113,37 +118,37 @@ html, body {
 
 /************ LOADING SCREEN ************/
 #loading-screen {
-    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    background: var(--loading-bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    z-index: 9999;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background: var(--loading-bg);
+    transform: translate(-50%, -50%);
 }
 
 .anima {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    box-shadow: 4px 0 0 var(--loading-shadow);
     animation: anima 1s linear infinite;
+    box-shadow: 4px 0 0 var(--loading-shadow);
 }
 
 .loading-img {
     width: 300px;
     height: 300px;
-    border-radius: 50%;
-    color: var(--loading-shadow);
-    position: fixed;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 300px;
     font-size: 32px;
+    position: fixed;
+    line-height: 300px;
+    text-align: center;
+    border-radius: 50%;
+    text-transform: uppercase;
+    color: var(--loading-shadow);
     background: url("../arq/img/Thauã-Logo-GPT.png") no-repeat center/cover;
     box-shadow: 0 0 5px var(--loading-shadow);
 }
@@ -153,60 +158,72 @@ html, body {
     100% { transform: rotate(360deg); }
 }
 
+/************ AUDIO ************/
+audio {
+    padding: 5px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50px;      
+    background-color: var(--audio-bg); 
+    filter: sepia(100%) hue-rotate(250deg)  brightness(1.0) invert(100%);
+}
+
 /************ MAIN BODY ************/
 .Current-body {
-    background: var(--main-bg);
     min-height: 100vh;
     margin-bottom: 100px;
+    background: var(--main-bg);
 }
 
 /************ HEADER ************/
 header {
-    padding: 30px;
     display: flex;
-    justify-content: space-between;
+    padding: 30px;
     align-items: center;
+    justify-content: space-between;
 }
 
-.logo-title { /**TULIO-THAUA-DUTRA**/
+/* --- Title: TÚLIO THAUÃ DUTRA --- */
+.logo-title { 
     cursor: default;
-    text-transform: uppercase;
     letter-spacing: 5px;
+    text-transform: uppercase;
     filter: drop-shadow(0 0 15px var(--logo-shadow));
 }
 
-.logo { /**MENU**/
+/* --- MENU --- */
+.logo { 
     border: none;
     font-size: 15pt;
     cursor: pointer;
-    padding: 5px 30px 5px 30px;
     font-weight: bold;
-    letter-spacing: 5px;
     border-radius: 5px;
+    letter-spacing: 5px;
     text-transform: uppercase;
+    padding: 5px 30px 5px 30px;
     transition: all 0.3s ease-in-out;
     filter: drop-shadow(0 0 15px var(--logo-shadow));
 }
 
 .logo:hover {
+    transition: all 0.3s ease-in-out; 
     color: var(--nav-link-hover-color);
     background: var(--nav-link-hover-bg);
-    transition: all 0.3s ease-in-out; 
 }
 
 
-/************ FUTURO SOFTWARE ************/
+/************ TITLE CMD FUTURO SOFTWARE ************/
 .futuro-software {
-    color: var(--futuro-color);
-    font-weight: bold;
-    font-size: 30px;
     padding: 15px;
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 2px;
-    background-color: var(--futuro-bg);
-    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
     width: fit-content;
     margin: 20px auto 0;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    color: var(--futuro-color);
+    background-color: var(--futuro-bg);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .blinking-cursor {
@@ -218,45 +235,45 @@ header {
 
 /************ DIV CONTAINER ************/
 .about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 50px;
-    margin: 50px auto;
+    display: flex;
     max-width: 1000px;
+    margin: 50px auto;
+    align-items: center;
+    justify-content: center;
 }
 
 /************ DIV ABOUT ME ************/
 .div-about {
-    animation: slideIn 3s forwards;
     margin: 50px;
-    cursor: default;
-    min-height: 300px; 
-    max-height: 350px; 
     width: 500px;
     padding: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    overflow: auto; 
+    cursor: default;
     font-size: 15px;
     line-height: 1.5;
+    min-height: 300px; 
+    max-height: 350px; 
+    border-radius: 20px;
+    color: var(--div-about-color);
+    animation: slideIn 3s forwards;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--div-about-bg);
+    font-family: Arial, Helvetica, sans-serif;
     border-right: 10px solid var(--button-bg);
     border-bottom: 10px solid var(--button-bg);
     box-shadow: 0 0 10px var(--div-about-shadow);
-    background-color: var(--div-about-bg);
-    color: var(--div-about-color);
-    border-radius: 20px;
-    overflow: auto; 
-    transition: all 0.3s ease-in-out;
 }
 
 @keyframes slideIn {
     from { transform: translateX(-100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
+    to   { transform: translateX(0);     opacity: 1; }
 }
 
 /************ IMAGEM TULIO ************/
 .img-tulio {
-    width: 100%; max-width: 270px;
     border-radius: 30px;
+    width: 100%; max-width: 270px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 0 10px var(--img-shadow);
     border-left: 10px solid var(--button-bg);
@@ -272,19 +289,19 @@ header {
 
 /************ DIV HABILIDADES ************/
 #habilidades {
-    text-align: center; 
     color: white; 
-    background-color: #000000; 
-    border-radius: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
     padding: 20px;
+    margin-top: 50px;
+    text-align: center; 
+    border-radius: 20px;
+    margin-bottom: 50px;
+    background-color: #000000; 
 }
 
 #div-habilidades {
-    text-align: center;
     gap: 20px;
     padding: 20px;
+    text-align: center;
 }
 
 #div-habilidades h3 {
@@ -296,7 +313,6 @@ header {
     color: white;
     font-size: 15px;
     margin-top: 10px;
-    
 }
 
 #div-habilidades img {
@@ -307,18 +323,18 @@ header {
 }
 
 #div-habilidades img:hover {
-    transform: scale(1.2);
     text-align: center;
+    transform: scale(1.2);
 }
 
 /************ DIV PROJETOS ************/
 #projetos {
-    text-align: center; 
     color: white;
-    background-color: #000000; 
-    margin-top: 50px;
-    margin-bottom: 50px;
     padding: 20px;
+    margin-top: 50px;
+    text-align: center; 
+    margin-bottom: 50px;
+    background-color: #000000; 
 }
 
 #div-projetos {
@@ -329,34 +345,34 @@ header {
 }
 
 .projeto1 {
-    color: white;
-    border: white 5px solid;
     gap: 20px;
-    padding: 20px;
-    background: linear-gradient(45deg, var(--button-hover-bg), var(--div-about-shadow), var(--button-hover-bg));
     width: 300px;
-    border-right: #686868 10px solid;
-    border-left: #686868 10px solid;
     height: 350px;
-    border-radius: 20px;
+    padding: 20px;
+    color: white;
     text-align: center;
-    padding-bottom: 90px;
+    border-radius: 20px;
+    padding-bottom: 100px;
+    border: white 5px solid;
+    background: var(--projetos-bg);
     transition: all 0.3s ease-in-out;
+    border-left: var(--projetos-border) 10px solid;
+    border-right: var(--projetos-border) 10px solid;
 }
 
 .projeto2 {
-    color: white;
-    border: white 5px solid;
-    border-right: #686868 10px solid;
-    border-left: #686868 10px solid;
     width: 300px;
-    background: linear-gradient(45deg, var(--button-hover-bg), var(--div-about-shadow), var(--button-hover-bg));
     height: 350px;
     padding: 20px;
-    padding-bottom: 90px;
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
+    color: white;
     text-align: center;
+    border-radius: 20px;
+    padding-bottom: 100px;
+    border: white 5px solid;
+    background: var(--projetos-bg);
+    transition: all 0.3s ease-in-out;
+    border-left: var(--projetos-border) 10px solid;
+    border-right: var(--projetos-border) 10px solid;
 }
 
 .projeto1 h3 {
@@ -380,15 +396,15 @@ header {
 }
 
 .projeto1:hover {
+    cursor: default;
     transform: scale(1.03);
     box-shadow: 0 0 10px var(--projeto1-hover-shadow);
-    cursor: default;
 }
 
 .projeto2:hover {
+    cursor: default;
     transform: scale(1.03);
     box-shadow: 0 0 10px var(--projeto2-hover-shadow);
-    cursor: default;
 }
 
 .projeto1:active,.projeto2:active {
@@ -396,99 +412,114 @@ header {
 }
 
 .projeto1 img {
-  margin-top: 20px;
-  width: 100%;
-  max-width: 300px;
-  height: auto;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    max-width: 300px;
 }
 
 .projeto2 img {
-  margin-top: 31px;
-  width: 100%;
-  max-width: 300px;
-  height: auto;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    max-width: 300px;
+    border: 5px solid black;
 }
-
-.div-badge {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 15px;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.badge-nodejs {
-    padding: 5px;
-    background: linear-gradient(45deg, #68a063, white, #68a063);
-    color: black;
-    border-radius: 10px;
-    margin-top: 5px;
-    width: fit-content;
-}
-
-.badge-javascript {
-    padding: 5px;
-    background: linear-gradient(45deg, #f0db4f, white, #f0db4f);
-    color: black;
-    border-radius: 10px;
-    margin-top: 5px;
-    width: fit-content;
-  }
-
-.badge-html {
-    padding: 5px;
-    background: linear-gradient(45deg, #e34c26, white, #e34c26);
-    color: black;
-    border-radius: 10px;
-    margin-top: 5px;
-    width: fit-content;
-  }
-
-.badge-css {
-    padding: 5px;
-    background: linear-gradient(45deg, aqua, white, aqua);
-    color: black;
-    border-radius: 10px;
-    margin-top: 5px;
-    width: fit-content;
-  }
 
 
 /************ BOTÃO VER PROJETO ************/
 .button-link {
-    background-color: var(--button-bg);
-    display: inline-block;
-    line-height: 40px;
-    margin-top: 20px;
-    text-decoration: none;
-    color: white;
-    border-radius: 15px;
     padding: 5px;
+    color: white;
+    margin-top: 20px;
+    line-height: 40px;
+    border-radius: 15px;
+    display: inline-block;
+    text-decoration: none;
     border-left: 8px solid white;
     border-right: 8px solid white;
-    border-bottom: 8px solid var(--div-about-shadow);
     transition: all 0.3s ease-in-out;
+    background-color: var(--button-bg);
+    border-bottom: 8px solid var(--div-about-shadow);
 }
 
 .button-link:hover {
-    transform: scale(1.1);
-    background-color: var(--button-hover-bg);
     opacity: 0.8;
     cursor: pointer;
+    transform: scale(1.1);
+    background-color: var(--button-hover-bg);
     border-right: 10px solid var(--footer-link-color);
     border-left: 10px solid var(--footer-link-color);
     border-bottom: 10px solid var(--footer-link-color);
 }
 
+/************ Configuração das Badges ************/
+.div-badge {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.badge-green {
+    padding: 4px 8px;
+    color: black;
+    margin-top: 5px;
+    width: fit-content;
+    font-size: 12px;
+    border-radius: 6px;
+    background: linear-gradient(45deg, #68a063, white, #68a063);
+}
+
+.badge-yellow {
+    padding: 4px 8px;
+    color: black;
+    margin-top: 5px;
+    width: fit-content;
+    font-size: 12px;
+    border-radius: 6px;
+    background: linear-gradient(45deg, #f0db4f, white, #f0db4f);
+  }
+
+.badge-orange {
+    padding: 4px 8px;
+    color: black;
+    margin-top: 5px;
+    width: fit-content;
+    font-size: 12px;
+    border-radius: 6px;
+    background: linear-gradient(45deg, #e34c26, white, #e34c26);
+  }
+
+.badge-blue {
+    padding: 4px 8px;
+    color: black;
+    margin-top: 5px;
+    width: fit-content;
+    font-size: 12px;
+    border-radius: 6px;
+    background: linear-gradient(45deg, aqua, white, aqua);
+}
+
+.badge-black {
+    padding: 4px 8px;
+    color: black;
+    margin-top: 5px;
+    width: fit-content;
+    font-size: 12px;
+    border-radius: 6px;
+    background: linear-gradient(45deg, #000000, white, #000000);
+}
 /************ DIV EXPERIÊNCIA ************/
 #experiencia {
-    text-align: center; 
-    color: white; 
-    background-color: #000000;
-    margin-top: 100px;
-    margin-bottom: 50px;
     padding: 20px;
+    color: white; 
+    margin-top: 100px;
+    text-align: center; 
+    margin-bottom: 50px;
+    background-color: #000000;
 } 
 
 #div-experiencia {
@@ -521,7 +552,7 @@ header {
 }
 
 .exp1 h3 {
-    font-size: 17pt;
+    font-size: 15pt;
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
@@ -539,6 +570,7 @@ header {
     display: flex; 
     flex-wrap: wrap; 
     margin-top: 10px;
+    justify-content: center;
 }
 
 .exp1-competencia p {
@@ -553,27 +585,37 @@ header {
 }
 
 /************ DIV CONTATO ************/
+
+#contato-title {
+    padding: 20px;
+    color: white; 
+    margin-top: 100px;
+    text-align: center; 
+    margin-bottom: 50px;
+    background-color: #000000;
+} 
+
 #helloWorld {
-    color: var(--contato-color);
-    font-weight: bold;
-    font-size: 30px;
     padding: 15px;
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 2px;
-    background-color: var(--contato-bg);
-    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
     width: fit-content;
+    letter-spacing: 2px;
+    border-radius: 15px;
     margin: 80px auto 0;
+    color: var(--contato-color);
+    background-color: var(--contato-bg);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .div-contatos {
-    text-align: center;
     gap: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 10px auto;
-    text-decoration: none;
     display: flex;
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px auto;
+    margin-bottom: 50px;
+    text-decoration: none;
     justify-content: center;
 }
 
@@ -586,38 +628,39 @@ header {
 }
 
 .div-contatos img:hover {
-    transform: scale(1.2);
     text-align: center;
+    transform: scale(1.2);
     filter: drop-shadow(0 0 10px var(--contato-hover-shadow));
 }
 
-/************ FOOTER ************/
+/**************** FOOTER ****************/
 footer {
-    background: var(--footer-bg);
-    position: fixed;
-    bottom: 0;
     left: 0;
+    bottom: 0;
     width: 100%;
+    z-index: 1000;
+    position: fixed;
     padding: 20px 0;
+    background: var(--footer-bg);
 }
 
 footer a {
+    height: 100%;
     display: flex;
-    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
     align-items: center;
     text-decoration: none;
-    text-align: center;
+    justify-content: center;
     color: var(--footer-link-color);
-    font-style: italic;
-    height: 100%;
-    font-weight: bold;
     transition: all 0.5s ease-in-out;
 }
 
 footer a:hover {
+    border-radius: 5px;
     color: var(--footer-link-hover-color);
     background: var(--footer-link-hover-bg);
-    border-radius: 5px;
     box-shadow: 0 0 5px var(--footer-link-hover-shadow);
 }
 
@@ -625,170 +668,171 @@ footer a:hover {
 
 /* --- Ajuste Desktop --- */
 .nav-desktop {
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-  width: 100%;
-  max-width: 1100px;
-  padding-right: 180px;
-  flex-wrap: nowrap;
-  margin: 0 auto;
+    gap: 50px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1100px;
+    flex-wrap: nowrap;
+    padding-right: 180px;
+    justify-content: space-between;
 }
 
 .nav-mobile,
 .nav-menu {
-  display: none;
+    display: none;
 }
 
 /* --- Mobile Menu --- */
 @media (max-width: 768px) {
-  .nav-desktop {
+.nav-desktop {
     display: none;
-  }
+}
 
-  .nav-mobile {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav-mobile {
     width: 100%;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-  .hamburger {
+.hamburger {
     cursor: pointer;
-    font-weight: bold;
     font-size: 15pt;
+    font-weight: bold;
     color: var(--nav-link-color);
     transition: all 0.3s ease-in-out;
-  }
+}
 
-  .hamburger:hover {
+.hamburger:hover {
     color: var(--nav-link-hover-color);
-  }
+}
 
-  /* Painel lateral */
-  .nav-menu {
-    display: none;
-    position: fixed;
+/* --- Painel Lateral --- */
+.nav-menu {
     top: 0;
     right: 0;
     width: 230px;
     height: 100vh;
-    background: var(--button-bg);
-    box-shadow: -2px 0 10px #00000090;
     z-index: 1000;
     padding: 30px;
+    display: none;
+    position: fixed;
+    background: var(--button-bg);
+    box-shadow: -2px 0 10px #00000090;
     animation: slideMenu 0.3s ease-in-out;
-  }
+}
 
-  .nav-menu.open {
+.nav-menu.open {
     display: block;
-  }
+}
 
-  .nav-close {
-    background: none;
+.nav-close {
+    top: 20px;
+    right: 25px;
     border: none;
     color: white;
     font-size: 30px;
     cursor: pointer;
+    background: none;
     position: absolute;
-    top: 20px;
-    right: 25px;
-  }
+}
 
-  .nav-links {
+.nav-links {
+    gap: 20px;
+    display: flex;
     list-style: none;
     margin-top: 80px;
-    display: flex;
     flex-direction: column;
-    gap: 20px;
-  }
+}
 
-  .nav-links a {
+.nav-links a {
     color: white;
     text-decoration: none;
     font-size: 16pt;
     font-weight: bold;
-  }
-
-  .nav-links a:hover {
-    color: var(--nav-link-hover-color);
-    background: var(--nav-link-hover-bg);
-    border-radius: 5px;
-    box-shadow: 0 0 5px var(--nav-link-hover-shadow);
-    transition: all 0.3s ease-in-out;
-  }
-
-  @keyframes slideMenu {
-    from { transform: translateX(100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-  }
-  
-  .futuro-software{
-    font-size: 12px;
-    width: 80%;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .about-container {
-    flex-direction: column;
-    gap: 30px;
-    
-  }
-
-  .img-tulio {
-    max-width: 50%;
-    height: auto;
-    flex-direction: column;
-    display: flex;
 }
 
-  .div-about {
-    display: flex;
-    width: 60%;
-    flex-direction: column;
-  } 
+.nav-links a:hover {
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    color: var(--nav-link-hover-color);
+    background: var(--nav-link-hover-bg);
+    box-shadow: 0 0 5px var(--nav-link-hover-shadow);
+}
 
-  #div-projetos {
+@keyframes slideMenu {
+    from { transform: translateX(100%); opacity: 0; }
+    to   { transform: translateX(0);    opacity: 1; }
+}
+  
+/* --- Ajuste do Titulo de Comando e Sobre Mim --- */
+.futuro-software{
+    width: 80%;
+    padding: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.about-container {
+    gap: 30px;
     flex-direction: column;
+}
+
+.img-tulio {
+    height: auto;
+    display: flex;
+    max-width: 50%;
+    flex-direction: column;
+}
+
+.div-about {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+} 
+
+/* --- Ajuste dos Projetos --- */
+#div-projetos {
     gap: 30px;
     display: flex;
-    justify-content: center;
-  }
-
-  .projeto1, .projeto2 {
-    width: 80%;
-    padding-bottom: 20%;
-    height: auto;
-
-  }
-
-  .div-badge {
     flex-direction: column;
+    justify-content: center;
+}
+
+.projeto1, .projeto2 {
+    width: 80%;
+    height: auto;
+    padding-bottom: 20%;
+}
+
+.div-badge {
     gap: 10px;
     display: flex;
-    justify-content: center;
     align-items: center;
-  }
-
-  #div-experiencia {
     flex-direction: column;
+    justify-content: center;
+}
+
+/* --- Ajuste das Experiências --- */
+#div-experiencia {
     gap: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-  }
+}
 
-  .exp1 {
+.exp1 {
     width: 80%;
     height: auto;
     padding: 10px;
     margin: 0 auto;
-  }
+}
 
-  #helloWorld {
-    font-size: 20px;
+/* --- Ajuste do Rodapé do Comando --- */
+#helloWorld {
     width: 80%;
     padding: 20px;
+    font-size: 20px;
     text-align: center;
-  }
-}
+}}
