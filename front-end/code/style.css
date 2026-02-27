@@ -10,6 +10,16 @@ html, body {
     overflow-x: hidden; 
 }
 
+
+.title-section {
+    padding: 20px;
+    color: white; 
+    margin-top: 100px;
+    text-align: center; 
+    margin-bottom: 50px;
+    background-color: #000000;
+} 
+
 /************ ROOT VARIABLES ************/
 :root {
     /* NAVBAR COLORS */
@@ -233,7 +243,7 @@ header {
 
 @keyframes blink { 50% { opacity: 0; } }
 
-/************ DIV CONTAINER ************/
+/************ SECTION CONTAINER ************/
 .about-container {
     gap: 50px;
     display: flex;
@@ -270,7 +280,7 @@ header {
     to   { transform: translateX(0);     opacity: 1; }
 }
 
-/************ IMAGEM TULIO ************/
+/************ IMAGE TULIO ************/
 .img-tulio {
     border-radius: 30px;
     width: 100%; max-width: 270px;
@@ -287,64 +297,55 @@ header {
     border-bottom: 10px solid #ffffff85;
 }
 
-/************ DIV HABILIDADES ************/
-#habilidades {
-    color: white; 
-    padding: 20px;
-    margin-top: 50px;
-    text-align: center; 
-    border-radius: 20px;
-    margin-bottom: 50px;
-    background-color: #000000; 
-}
+/************ SECTION SKILLS ************/
 
-#div-habilidades {
+#skills {
     gap: 20px;
     padding: 20px;
     text-align: center;
 }
 
-#div-habilidades h3 {
+#skills h3 {
     color: gray;
     font-weight: bold;
 }
 
-#div-habilidades p {
+#skills p {
     color: white;
     font-size: 15px;
     margin-top: 10px;
 }
 
-#div-habilidades img {
+#skills img {
     width: 50px;
     height: 50px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
 
-#div-habilidades img:hover {
+#skills img:hover {
     text-align: center;
     transform: scale(1.2);
 }
 
-/************ DIV PROJETOS ************/
-#projetos {
-    color: white;
-    padding: 20px;
-    margin-top: 50px;
-    text-align: center; 
-    margin-bottom: 50px;
-    background-color: #000000; 
+.div-tech, .div-tools {
+    margin: 20px 0;
 }
 
-#div-projetos {
+div img[alt="VEGAS18"] {
+    width: 40px !important;
+    height: 50px !important;
+}
+
+/************ SECTION PROJECTS ************/
+#projects {
     margin: 0;
     gap: 50px;
     display: flex;
     justify-content: center;
 }
 
-.projeto1 {
+.project-card {
     gap: 20px;
     width: 300px;
     height: 350px;
@@ -360,22 +361,7 @@ header {
     border-right: var(--projetos-border) 10px solid;
 }
 
-.projeto2 {
-    width: 300px;
-    height: 350px;
-    padding: 20px;
-    color: white;
-    text-align: center;
-    border-radius: 20px;
-    padding-bottom: 100px;
-    border: white 5px solid;
-    background: var(--projetos-bg);
-    transition: all 0.3s ease-in-out;
-    border-left: var(--projetos-border) 10px solid;
-    border-right: var(--projetos-border) 10px solid;
-}
-
-.projeto1 h3 {
+.project-card h3 {
     padding: 5px;
     color: #000000;
     font-weight: bold;
@@ -385,40 +371,24 @@ header {
     background-color: var(--projeto1-hover-shadow);
 }
 
-.projeto2 h3 {
-    padding: 5px;
-    color: #000000;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px black;
-    background-color: var(--projeto2-hover-shadow);
-}
-
-.projeto1:hover {
-    cursor: default;
-    transform: scale(1.03);
-    box-shadow: 0 0 10px var(--projeto1-hover-shadow);
-}
-
-.projeto2:hover {
+.project-card:hover {
     cursor: default;
     transform: scale(1.03);
     box-shadow: 0 0 10px var(--projeto2-hover-shadow);
 }
 
-.projeto1:active,.projeto2:active {
+.project-card:active {
     background-color: var(--contato-bg);
 }
 
-.projeto1 img {
+.project-card img {
     width: 100%;
     height: auto;
     margin-top: 20px;
     max-width: 300px;
 }
 
-.projeto2 img {
+.project-card img {
     width: 100%;
     height: auto;
     margin-top: 25px;
@@ -426,8 +396,7 @@ header {
     border: 5px solid black;
 }
 
-
-/************ BOTÃO VER PROJETO ************/
+/************ BUTTON TO SEE THE PROJECT ************/
 .button-link {
     padding: 5px;
     color: white;
@@ -453,7 +422,7 @@ header {
     border-bottom: 10px solid var(--footer-link-color);
 }
 
-/************ Configuração das Badges ************/
+/************ BADGES CONFIG ************/
 .div-badge {
   display: flex;
   flex-wrap: wrap;
@@ -512,17 +481,9 @@ header {
     border-radius: 6px;
     background: linear-gradient(45deg, #000000, white, #000000);
 }
-/************ DIV EXPERIÊNCIA ************/
-#experiencia {
-    padding: 20px;
-    color: white; 
-    margin-top: 100px;
-    text-align: center; 
-    margin-bottom: 50px;
-    background-color: #000000;
-} 
+/************ SECTION EXPERIENCE ************/
 
-#div-experiencia {
+#experience {
     margin: 0;
     gap: 50px;
     display: flex;
@@ -530,7 +491,7 @@ header {
     justify-content: center;
 }
 
-.exp1 {
+.exp-card {
     height: auto;
     width: 300px;
     padding: 30px;
@@ -545,27 +506,31 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
-.exp1:hover {
+.exp-card:hover {
     cursor: crosshair;
     transform: scale(1.03);
     box-shadow: 0 0 10px gray;
 }
 
-.exp1 h3 {
+.exp-card h3 {
     font-size: 15pt;
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.exp1 img {
+.exp-card h4 {
+    flex-basis: 100%;
+}
+
+.exp-card img {
     width: 100px; 
     margin: 0 auto;
     display: block;
     border-radius: 20%;
 }
 
-.exp1-competencia {
+.exp-skills {
     gap: 10px; 
     display: flex; 
     flex-wrap: wrap; 
@@ -573,7 +538,7 @@ header {
     justify-content: center;
 }
 
-.exp1-competencia p {
+.exp-skills p {
     display: flex;
     font-size: 10pt;
     padding: 5px 10px;
@@ -584,16 +549,7 @@ header {
     background-color: var(--exp-competencia-bg);
 }
 
-/************ DIV CONTATO ************/
-
-#contato-title {
-    padding: 20px;
-    color: white; 
-    margin-top: 100px;
-    text-align: center; 
-    margin-bottom: 50px;
-    background-color: #000000;
-} 
+/************ SECTION CONTACT ************/
 
 #helloWorld {
     padding: 15px;
@@ -608,7 +564,7 @@ header {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.div-contatos {
+.contact {
     gap: 50px;
     display: flex;
     margin-top: 50px;
@@ -619,7 +575,7 @@ header {
     justify-content: center;
 }
 
-.div-contatos img {
+.contact img {
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -627,7 +583,7 @@ header {
     filter: drop-shadow(0 5px 7px var(--exp-hover-shadow)) opacity(0.3);
 }
 
-.div-contatos img:hover {
+.contact img:hover {
     text-align: center;
     transform: scale(1.2);
     filter: drop-shadow(0 0 10px var(--contato-hover-shadow));
@@ -666,7 +622,7 @@ footer a:hover {
 
 /************ MEDIA QUERIES ************/
 
-/* --- Ajuste Desktop --- */
+/* --- Adjust Desktop --- */
 .nav-desktop {
     gap: 50px;
     width: 100%;
@@ -708,7 +664,7 @@ footer a:hover {
     color: var(--nav-link-hover-color);
 }
 
-/* --- Painel Lateral --- */
+/* --- Side Panel --- */
 .nav-menu {
     top: 0;
     right: 0;
@@ -766,7 +722,7 @@ footer a:hover {
     to   { transform: translateX(0);    opacity: 1; }
 }
   
-/* --- Ajuste do Titulo de Comando e Sobre Mim --- */
+/* --- Adjust Title and About Me --- */
 .futuro-software{
     width: 80%;
     padding: 20px;
@@ -792,15 +748,15 @@ footer a:hover {
     flex-direction: column;
 } 
 
-/* --- Ajuste dos Projetos --- */
-#div-projetos {
+/* --- Adjust Projects --- */
+#projects {
     gap: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.projeto1, .projeto2 {
+.project-card {
     width: 80%;
     height: auto;
     padding-bottom: 20%;
@@ -814,22 +770,22 @@ footer a:hover {
     justify-content: center;
 }
 
-/* --- Ajuste das Experiências --- */
-#div-experiencia {
+/* --- Adjust Experience Section --- */
+#experience {
     gap: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.exp1 {
+.exp-card {
     width: 80%;
     height: auto;
     padding: 10px;
     margin: 0 auto;
 }
 
-/* --- Ajuste do Rodapé do Comando --- */
+/* --- Adjust Footer Command --- */
 #helloWorld {
     width: 80%;
     padding: 20px;

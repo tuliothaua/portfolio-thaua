@@ -11,14 +11,14 @@
 </head>
 <body class="Current-body">
     
-    <!------------------LOADING SCREEN------------------>
+    <!------------------LOADING - SCREEN------------------>
     <div id="loading-screen">
         <div class="loading-img" aria-label="Carregando..."></div>
         <div class="anima"></div>
         </div>
         
         <header class="nav" style="margin-bottom: 20px;">
-        <!------------------Desktop------------------>
+        <!------------------Menu - Desktop------------------>
         <div class="nav-desktop">
             <button class="logo" onclick="toggleMenu()">☰&nbsp;MENU</button>
             <a class="logo-title" href="#">Túlio&nbsp;Thauã&nbsp;Dutra</a>
@@ -29,13 +29,13 @@
             </ul>
         </div>
 
-        <!------------------Mobile------------------>
+        <!------------------Menu - Mobile------------------>
         <div class="nav-mobile">
             <a href="#">TÚLIO&nbsp;T.&nbsp;DUTRA</a>
             <div class="hamburger" id="hamburger">☰&nbsp;MENU</div>
         </div>
 
-        <!------------------Painel lateral mobile ------------------->
+        <!------------------Side Panel - Mobile ------------------->
         <div class="nav-menu" id="navMenu">
             <button class="nav-close" id="closeMenu">&times;</button>
             <ul class="nav-links">
@@ -45,12 +45,12 @@
             </ul>
         </div>
     </header>
-
-    <!------------------MAIN CONTENT ------------------>
+    
+    <!------------------MAIN - CONTENT------------------>
     <main> 
-        <!------------------SOBRE MIM THAUÃ------------------>
+        <!------------------ABOUT ME - THAUÃ------------------>
         <h1 class="futuro-software">...</h1>
-        <div class="about-container" id="Sobre">
+        <section class="about-container">
             <img src="front-end/arq/img/tulioimg.jpg" oncontextmenu="return false;" alt="tulioimg" class="img-tulio">
             <div class="div-about">
                 <h2>Sobre Mim</h2>
@@ -63,13 +63,13 @@
                 sempre aberto a novas oportunidades e pronto para desafios maiores.
                 </p>
             </div>
-        </div>
-        <!------------------HABILIDADES THAUÃ------------------>    
-        <h2 id="habilidades">Habilidades</h2>
-        <div id="div-habilidades">
+        </section>
+        <!------------------SKILLS - THAUÃ------------------>    
+        <h2 class="title-section">Habilidades</h2>
+        <section id="skills">
             <h3>Tech Stack</h3>
             <p>Tools & Langs I’ve used</p>
-                <div class="div-tech" style="margin: 20px 0;">
+                <div class="div-tech">
                     <img src="front-end/arq/img/html-5.svg" alt="HTML">
                     <img src="front-end/arq/img/css3.svg" alt="CSS3">
                     <img src="front-end/arq/img/javascript.svg" alt="JAVASCRIPT">
@@ -80,20 +80,19 @@
                     <img src="front-end/arq/img/GIT.svg" alt="GIT">
                 </div>
             <h3>Tools Stack</h3>
-                <div class="div-tools" style="margin: 20px 0;">
+                <div class="div-tools">
                     <img src="front-end/arq/img/photoshop.svg" alt="ADOBE">
-                    <img src="front-end/arq/img/vegas18.svg" alt="VEGAS 18" style="width: 40px; height: 50px; border-radius: 10px; ">
+                    <img src="front-end/arq/img/vegas18.svg" alt="VEGAS18">
                     <img src="front-end/arq/img/word.svg" alt="WORD">
                     <img src="front-end/arq/img/excel.svg" alt="EXCEL">
                     <img src="front-end/arq/img/powerpoint.svg" alt="POWERPOINT">
-                    <img src="front-end/arq/img/coreldraw.png" alt="COREL DRAW">
+                    <img src="front-end/arq/img/coreldraw.png" alt="CORELDRAW">
                 </div>
-        </div>
-        <!------------------PROJETOS THAUÃ------------------>
-        <h2 id="projetos">Projetos</h2>
-        <div class="div-slider">
-            <div id="div-projetos" style="margin: 50px">
-                <div class="projeto1">
+        </section>
+        <!------------------PROJECTS - THAUÃ------------------>
+        <h2 class="title-section">Projetos</h2>
+            <section id="projects">
+                <article class="project-card">
                     <h3>GRÊMIO HISTORY-HUB</h3>
                     <img src="front-end/arq/img/GRÊMIO HISTORY-HUB.png" alt="GRÊMIO HISTORY-HUB">
                     <h4>Um site dedicado a torcedores e curiosos do futebol, feito em parceria com Kauê T. Barbosa</h4>
@@ -103,8 +102,8 @@
                     <p class="badge-yellow">JavaScript</p>
                     <p class="badge-orange">HTML5</p>
                     <p class="badge-blue">CSS3</p></div>
-                </div>
-                <div class="projeto2">
+                </article>
+                <article class="project-card">
                     <h3>OBITO BOT - DISCORD v14</h3>
                     <img src="front-end/arq/img/obito-invite.jpg" alt="obito-invite">
                     <h4>Um bot para o discord feito na versão v14 ele contém diversos comandos para você se divertir.</h4>
@@ -116,21 +115,20 @@
                         <p class="badge-yellow">DotEnv</p>
                         <p class="badge-black">Replit</p>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!------------------EXPERIÊNCIA THAUÃ------------------>
-        <h2 id="experiencia">Experiências</h2>
-        <div id="div-experiencia">
-            <div class="exp1">
+                </article>
+            </section>
+        <!------------------EXPERIENCES - THAUÃ------------------>
+        <h2 class="title-section">Experiências</h2>
+        <section id="experience">
+            <article class="exp-card">
                 <img src="front-end/arq/img/eebindustrial.jpg" alt="EEB Industrial de Lages">
                 <h3>EEB&nbsp;Industrial&nbsp;de&nbsp;Lages</h3>
                 <h4>No EEB Industrial de Lages, eu trabalhei como estágiario, onde prestei serviços como: Atendimento ao cliente,
                 gerenciamento de documentos, admissões escolares, fornecendo também ajuda com edição de vídeo, edição de foto e suporte
                 em atividades extras.</h4>
                 <br>
-                <div class="exp1-competencia">
-                    <h4 style="flex-basis: 100%;">Competências:</h4>
+                <div class="exp-skills">
+                    <h4>Competências:</h4>
                     <p>Adobe Photoshop</p>
                     <p>Microsoft Word</p>
                     <p>Microsoft Excel</p>
@@ -138,13 +136,13 @@
                     <p>Comunicação</p>
                     <p>Trabalho em equipe</p>
                 </div>
-            </div>            
-        </div>
+            </article>
+        </section>            
        
-        <!------------------CONTATO THAUÃ------------------>
-        <h2 id="contato-title">Contato</h2>
+        <!------------------CONTACTS - THAUÃ------------------>
+        <h2 class="title-section">Contato</h2>
         <h1 id="helloWorld">...</h1>
-        <div class="div-contatos" id="contato">
+        <section class="contact">
             <a href="https://github.com/tuliothaua" target="_blank">
                 <img src="front-end/arq/img/github.svg" alt="GITHUB">
             </a>
@@ -154,7 +152,7 @@
             <a href="mailto:tulio.dutra.contato@gmail.com" target="_blank">
                 <img src="front-end/arq/img/email.svg" alt="EMAIL">
             </a>
-        </div>
+        </section>
     </main>
     
     <!------------------FOOTER THAUÃ------------------>
@@ -164,7 +162,8 @@
 
     <!------------------AUDIO WICK------------------>
     <audio controlsList="nodownload" id="audwick" autoplay controls loop>
-        <source src="front-end/arq/aud/wickNoCopyrightMsc.mp3" type="audio/mp3"> Seu navegador não suporta áudio.
+        <source src="front-end/arq/aud/wickNoCopyrightMsc.mp3" 
+        type="audio/mp3"> Seu navegador não suporta áudio.
     </audio>
     <!------------------SCRIPT JAVASCRIPT------------------>
     <script src="front-end/code/script.js"></script>
