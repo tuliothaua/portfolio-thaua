@@ -2,10 +2,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Túlio Thauã Dutra | Portfólio</title>
-  <link rel="shortcut icon" href="front-end/arq/img/Thauã-Logo-GPT.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="front-end/arq/img/Thauã-Logo-GPT.png" type="image/x-icon">
   
   <link rel="stylesheet" href="front-end/code/style.css">
 </head>
@@ -13,7 +18,7 @@
     
     <!------------------LOADING - SCREEN------------------>
     <div id="loading-screen">
-        <div class="loading-img" aria-label="Carregando..."></div>
+        <div class="loading-img" aria-label="Carregando...">Sincronizando</div>
         <div class="anima"></div>
         </div>
         
@@ -23,9 +28,9 @@
             <button class="logo" onclick="toggleMenu()">☰&nbsp;MENU</button>
             <a class="logo-title" href="#">Túlio&nbsp;Thauã&nbsp;Dutra</a>
             <ul class="nav-list">
-            <li><a href="#projetos">PROJETOS</a></li>
-            <li><a href="#experiencia">EXPERIÊNCIA</a></li>
-            <li><a href="#contato">CONTATO</a></li>
+            <li><a href="#p">PROJETOS</a></li>
+            <li><a href="#e">EXPERIÊNCIAS</a></li>
+            <li><a href="#c">CONTATOS</a></li>
             </ul>
         </div>
 
@@ -39,9 +44,10 @@
         <div class="nav-menu" id="navMenu">
             <button class="nav-close" id="closeMenu">&times;</button>
             <ul class="nav-links">
-                <li><a href="#projetos">PROJETOS</a></li>
-                <li><a href="#experiencia">EXPERIÊNCIA</a></li>
-                <li><a href="#contato">CONTATO</a></li>
+                <li><a href="#p">PROJETOS</a></li>
+                <li><a href="#e">EXPERIÊNCIAS</a></li>
+                <li><a href="#c">CONTATOS</a></li>
+                <li><a href="#i">IDIOMAS</a></li>
             </ul>
         </div>
     </header>
@@ -54,13 +60,14 @@
             <img src="front-end/arq/img/tulioimg.jpg" oncontextmenu="return false;" alt="tulioimg" class="img-tulio">
             <div class="div-about">
                 <h2>Sobre Mim</h2>
-                <p>Olá Mundo, estou cursando Sistemas de Informação na Uniplac de Lages e aprofundando meus conhecimentos na área de TI. Já concluí
-                meu estágio na escola EEB Industrial de Lages, onde prestei serviços com o uso da tecnologia. Além disso, tenho
-                experiência em design gráfico e visual, tendo criado diversas thumbnails, banners e logotipos para YouTube.
-            
-                Também estudei inglês na KNN Idiomas e na Tripper Idiomas, alcançando nível intermediário. Busco constantemente me
-                aprimorar e recentemente iniciei o curso de JavaScript básico do Curso em Vídeo para me introduzir a programação. Estou
-                sempre aberto a novas oportunidades e pronto para desafios maiores.
+                <p>Olá, Mundo! Sou estudante de Sistemas de Informação na UNIPLAC e desenvolvedor Júnior em formação, com foco no
+                ecossistema .NET.
+                <br><br>
+                Tenho 9 meses de experiência como estagiário de TI, atuando no suporte a operações tecnológicas. Na parte de
+                desenvolvimento, estudo C#, .NET e JavaScript. Possuo certificação de Engenharia de Software pela FIAP (100h) e
+                atualmente estudo DevOps & Agile Culture.
+                <br><br>
+                Inglês intermediário - Sempre aprendendo e pronto para novos desafios.
                 </p>
             </div>
         </section>
@@ -68,57 +75,113 @@
         <h2 class="title-section">Habilidades</h2>
         <section id="skills">
             <h3>Tech Stack</h3>
+            
+            <p>Thauã's Skills</p>
+            <div class="div-tech">
+                <img src="front-end/arq/img/javascript.svg" alt="JAVASCRIPT">
+                <img src="front-end/arq/img/css3.svg" alt="CSS3">
+                <img src="front-end/arq/img/html-5.svg" alt="HTML">
+                <img src="front-end/arq/img/GIT.svg" alt="GIT">
+            </div>
+            </p>
+
             <p>Tools & Langs I’ve used</p>
                 <div class="div-tech">
-                    <img src="front-end/arq/img/html-5.svg" alt="HTML">
-                    <img src="front-end/arq/img/css3.svg" alt="CSS3">
-                    <img src="front-end/arq/img/javascript.svg" alt="JAVASCRIPT">
-                    <img src="front-end/arq/img/cpp.svg" alt="CPP">
-                    <img src="front-end/arq/img/mysql.svg" alt="MYSQL">
                     <img src="front-end/arq/img/Kotlin.svg" alt="KOTLIN">
+                    <img src="front-end/arq/img/cpp.svg" alt="CPP">
+                    <img src="front-end/arq/img/cs.svg" alt="CSHARP">
+                    <img src="front-end/arq/img/mysql.svg" alt="MYSQL">
                     <img src="front-end/arq/img/MSSQL.png" alt="MSSQL">
-                    <img src="front-end/arq/img/GIT.svg" alt="GIT">
+                   
                 </div>
             <h3>Tools Stack</h3>
                 <div class="div-tools">
                     <img src="front-end/arq/img/photoshop.svg" alt="ADOBE">
                     <img src="front-end/arq/img/vegas18.svg" alt="VEGAS18">
+                    <img src="front-end/arq/img/coreldraw.png" alt="CORELDRAW">
+                    <img src="front-end/arq/img/figma.png" alt="FIGMA">
+                    <img src="front-end/arq/img/vs.png" alt="VISUALSTUDIO">
                     <img src="front-end/arq/img/word.svg" alt="WORD">
                     <img src="front-end/arq/img/excel.svg" alt="EXCEL">
                     <img src="front-end/arq/img/powerpoint.svg" alt="POWERPOINT">
-                    <img src="front-end/arq/img/coreldraw.png" alt="CORELDRAW">
                 </div>
         </section>
         <!------------------PROJECTS - THAUÃ------------------>
-        <h2 class="title-section">Projetos</h2>
-            <section id="projects">
+        
+        <h2 id="p" class="title-section">Projetos</h2>
+        <section id="projects">
+            <div class="carousel-track" id="carousel-track">
+        
                 <article class="project-card">
-                    <h3>GRÊMIO HISTORY-HUB</h3>
+                    <h3>Grêmio History Hub – Interactive Web Experience</h3>
                     <img src="front-end/arq/img/GRÊMIO HISTORY-HUB.png" alt="GRÊMIO HISTORY-HUB">
-                    <h4>Um site dedicado a torcedores e curiosos do futebol, feito em parceria com Kauê T. Barbosa</h4>
+                    <h4>Desenvolvimento frontend de site histórico interativo com animações dinâmicas e áudio integrado. Otimização de
+                    carregamento de mídia para garantir uma navegação fluida, imersiva e com ótimo foco em UI/UX.</h4>
                     <a href="https://github.com/tuliothaua/sitegremio" target="_blank" class="button-link">Ver Projeto</a>
                     <div style="height: 10px;"></div>
                     <div class="div-badge">
-                    <p class="badge-yellow">JavaScript</p>
-                    <p class="badge-orange">HTML5</p>
-                    <p class="badge-blue">CSS3</p></div>
-                </article>
-                <article class="project-card">
-                    <h3>OBITO BOT - DISCORD v14</h3>
-                    <img src="front-end/arq/img/obito-invite.jpg" alt="obito-invite">
-                    <h4>Um bot para o discord feito na versão v14 ele contém diversos comandos para você se divertir.</h4>
-                    <a href="https://github.com/tuliothaua/bot-v14-discord" target="_blank" class="button-link">Ver Projeto</a> 
-                    <div class="div-badge">
                         <p class="badge-yellow">JavaScript</p>
-                        <p class="badge-green">Node.js</p>
-                        <p class="badge-blue">Discord.js</p>
-                        <p class="badge-yellow">DotEnv</p>
-                        <p class="badge-black">Replit</p>
+                        <p class="badge-orange">HTML5</p>
+                        <p class="badge-blue">CSS3</p>
                     </div>
                 </article>
-            </section>
+        
+                <article class="project-card">
+                    <h3>Discord Bot Development – Node.js & Discord.js v14</h3>
+                    <img src="front-end/arq/img/obito-invite.jpg" alt="obito-invite">
+                    <h4>Desenvolvimento de bot com funções de moderação e utilitários em tempo real usando programação assíncrona. Foco em
+                    design visual com menus interativos (Embeds e ActionRows).</h4>
+                    <a href="https://github.com/tuliothaua/bot-v14-discord" target="_blank" class="button-link">Ver Projeto</a>
+                    
+                    <div class="div-badge">
+                        <p class="badge-yellow">JavaScript</p>
+                        <p class="badge-blue">User Experience (UX)</p>
+                        <p class="badge-green">Node.js</p>
+                        <p class="badge-orange">Discord.js</p>
+                        
+                    </div>
+                </article>
+        
+                <!--------> 
+                <article class="project-card">
+                    <h3>Lógica de Programação - JavaScript & Node.js</h3>
+                    <img src="front-end/arq/img/JAVASCRIPT.png" alt="descrição">
+                    <h4>Desenvolvimento de lógica avançada em JavaScript e Node.js através de desafios complexos. Criação de códigos limpos,
+                    eficientes e assíncronos baseados em cenários reais do mercado.</h4>
+                    <a href="https://github.com/tuliothaua/desafios-js" target="_blank" class="button-link">Ver Projeto</a>
+                    <div class="div-badge">
+                        <p class="badge-yellow">JavaScript</p>
+                        <p class="badge-orange">HTML</p>
+                        <p class="badge-blue">CSS</p>
+                        <p class="badge-green">Node.js</p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3>Desenvolvimento de Sistemas - Lógica e Prática com C# & .NET</h3>
+                    <img src="front-end/arq/img/CSHARP GIT.png" alt="Projeto-JavaScript">
+                    <h4>Projeto com foco em lógica avançada, Programação Orientada a Objetos e criação de sistemas CRUD.
+                    Experiência na arquitetura de soluções modulares de backend e processamento de dados.</h4>
+                    <a href="https://github.com/tuliothaua/desafios-csharp" target="_blank" class="button-link">Ver Projeto</a>
+                    <div class="div-badge">
+                        <p class="badge-green">C#</p>
+                        <p class="badge-blue">.NET</p>
+                    </div>
+                </article>
+        
+            </div>
+        
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn" disabled>&#8592;</button>
+                <div class="carousel-dots" id="carouselDots"></div>
+                <button class="carousel-btn" id="nextBtn">&#8594;</button>
+            </div>
+        </section>
+
+        <!-------------------IDIOMAS------------->
+            
         <!------------------EXPERIENCES - THAUÃ------------------>
-        <h2 class="title-section">Experiências</h2>
+        <h2 id="e" class="title-section">Experiências</h2>
         <section id="experience">
             <article class="exp-card">
                 <img src="front-end/arq/img/eebindustrial.jpg" alt="EEB Industrial de Lages">
@@ -139,10 +202,18 @@
             </article>
         </section>            
        
+        <!--------FORMAÇÕES------->
+
+
+
+
+        <!---------CURSOS--------->
+
+
         <!------------------CONTACTS - THAUÃ------------------>
-        <h2 class="title-section">Contato</h2>
+        <h2 id="c" class="title-section">Contatos</h2>
         <h1 id="helloWorld">...</h1>
-        <section class="contact">
+        <section id="contacts" class="contact">
             <a href="https://github.com/tuliothaua" target="_blank">
                 <img src="front-end/arq/img/github.svg" alt="GITHUB">
             </a>

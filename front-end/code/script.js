@@ -47,7 +47,7 @@ const loadingElement = document.querySelector("#loading-screen");
 /************ TEXTO [DESENVOLVEDOR DE SOFTWARE ▯] ************/
 const developerText = document.querySelector(".futuro-software");
 if (developerText) {
-    const text = "[> Futuro Desenvolvedor de Software <]...";
+    const text = "[> Information Systems Student & Tech Problem Solver <]...";
     let index = 0;
     const speed = 200;
 
@@ -73,7 +73,7 @@ const helloWorldContact = document.querySelector("#helloWorld");
 
 // Verifica se o elemento existe na página
 if (helloWorldContact) {
-    const text = "[E aí pronto para ver o que vem depois?]...";
+    const text = "[Gostou do que viu?]...";
     let index = 0;
     const speed = 150; 
 
@@ -109,3 +109,31 @@ if (helloWorldContact) {
     /* --- Adiciona um evento para verificar o scroll da página --- */
     window.addEventListener("scroll", startTypingWhenVisible);
 }
+
+// CAROUSEL
+const track = document.getElementById('carousel-track');
+const cards = track.querySelectorAll('.project-card');
+const dotsEl = document.getElementById('carouselDots');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let current = 0;
+
+cards.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(dot);
+});
+
+function goTo(i) {
+    current = i;
+    track.style.transform = `translateX(-${current * (cards[0].offsetWidth + 30)}px)`;
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === cards.length - 1;
+    document.querySelectorAll('.carousel-dot').forEach((d, idx) => {
+        d.classList.toggle('active', idx === current);
+    });
+}
+
+prevBtn.addEventListener('click', () => goTo(current - 1));
+nextBtn.addEventListener('click', () => goTo(current + 1));
