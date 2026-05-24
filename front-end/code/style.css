@@ -227,12 +227,13 @@ header {
 /************ TITLE CMD FUTURO SOFTWARE ************/
 .futuro-software {
     padding: 15px;
-    font-size: 30px;
+    font-size: 18px;
     font-weight: bold;
     width: fit-content;
-    margin: 20px auto 0;
+    margin: 50px auto 0;
     border-radius: 15px;
     letter-spacing: 2px;
+    
     color: var(--futuro-color);
     background-color: var(--futuro-bg);
     font-family: 'Courier New', Courier, monospace;
@@ -528,6 +529,67 @@ div img[alt="VEGAS18"] {
     border-radius: 6px;
     background: linear-gradient(45deg, #000000, white, #000000);
 }
+
+/************ SECTION IDIOMAS ************/
+
+#idiomas {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+    flex-wrap: wrap; /* Garante que funcione bem no celular */
+}
+
+.div-idiomas {
+    flex: 1;
+    min-width: 250px; /* Não deixa a caixa esmagar menos que isso */
+    max-width: 300px; /* Não deixa a caixa esticar demais */
+    padding: 40px 30px; /* Um pouco menos de espaço interno nas laterais */
+    
+    /* Mágica para alinhar o conteúdo interno verticalmente: */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+
+    text-align: center;
+    border-radius: 10px;
+    background-color: black;
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 5px solid var(--div-about-bg);
+}
+
+
+.div-idiomas h3 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.div-idiomas p {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.div-idiomas img {
+    max-width: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: auto; 
+}
+
+.div-idiomas {
+    margin-top: 10px;
+    width: 100px; /* Ajuste a largura do seu botão se necessário */
+}
+
+.div-idiomas:hover {
+    cursor: default;
+    box-shadow: 0 0 10px var(--projeto2-hover-shadow);
+}
+
+
 /************ SECTION EXPERIENCE ************/
 
 #experience {
@@ -600,7 +662,7 @@ div img[alt="VEGAS18"] {
 
 #helloWorld {
     padding: 15px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     width: fit-content;
     letter-spacing: 2px;
@@ -773,7 +835,7 @@ footer a:hover {
 .futuro-software{
     width: 80%;
     padding: 20px;
-    font-size: 12px;
+    font-size: 14pt;
     text-align: center;
 }
 
@@ -797,14 +859,16 @@ footer a:hover {
 
 /* --- Adjust Projects --- */
 #projects {
-    gap: 60px;
+    gap: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 
-.project-card { min-width: 85vw; }
+.project-card { min-width: 85vw; margin-left: 10px; }
+
+.carousel-track {gap: 25px;}
 
 .div-badge {
     gap: 10px;
@@ -813,7 +877,6 @@ footer a:hover {
     flex-direction: column;
     justify-content: center;
 }
-
 /* --- Adjust Experience Section --- */
 #experience {
     gap: 30px;
@@ -833,6 +896,13 @@ footer a:hover {
 #helloWorld {
     width: 80%;
     padding: 20px;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
-}}
+}
+
+footer a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+}
+
