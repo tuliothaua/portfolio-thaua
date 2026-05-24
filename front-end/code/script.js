@@ -110,7 +110,7 @@ if (helloWorldContact) {
     window.addEventListener("scroll", startTypingWhenVisible);
 }
 
-// CAROUSEL
+/******************* CAROUSEL *******************/
 const track = document.getElementById('carousel-track');
 const cards = track.querySelectorAll('.project-card');
 const dotsEl = document.getElementById('carouselDots');
