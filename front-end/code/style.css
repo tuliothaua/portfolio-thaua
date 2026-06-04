@@ -23,11 +23,11 @@ html, body {
 /************ ROOT VARIABLES ************/
 :root {
     /* NAVBAR COLORS */
-    --nav-link-color: #1a1a1a;
+    --nav-link-color: black;
     --nav-link-hover-color: white;
-    --nav-link-hover-bg: #9a9d4e33;
-    --nav-link-hover-shadow: #9a9d4e80;
-    --nav-gradient: linear-gradient(to right, #ffffff, #5e5e55, #ffffff);
+    --nav-link-hover-bg: #00000033;
+    --nav-link-hover-shadow: #4fe100b7;
+    --nav-gradient: white;
 
     /* TEXT SELECTION */
     --selection-color: black;
@@ -49,7 +49,7 @@ html, body {
 
     /* DIV ABOUT */
     --div-about-color: white;
-    --div-about-bg: #5e5e55cc;
+    --div-about-bg: #575e55cc;
     --div-about-shadow: #5e5e55;
     
     /* IMAGES */
@@ -81,11 +81,13 @@ html, body {
     --footer-link-hover-color: white;
     --footer-link-hover-bg: #9a9d4e33;
     --footer-link-hover-shadow: #9a9d4e80;
-    --footer-bg: linear-gradient(to right, #ffffff, #5e5e55, #ffffff);
+    --footer-bg: white;
 
     /* AUDIO */
     --audio-bg: #23dc2c;
 }
+
+
 
 /************ NAVBAR ************/
 .nav {
@@ -278,6 +280,11 @@ header {
     box-shadow: 0 0 10px var(--div-about-shadow);
 }
 
+
+.div-about span {
+    color: #00ff80;
+}
+
 @keyframes slideIn {
     from { transform: translateX(-100%); opacity: 0; }
     to   { transform: translateX(0);     opacity: 1; }
@@ -364,7 +371,7 @@ div img[alt="VEGAS18"] {
     text-align: center;
     border-radius: 20px;
     border: white 5px solid;
-    background-color: #000000;
+    background: linear-gradient(45deg, black, gray, black 50%);
     transition: all 0.3s ease-in-out;
     border-left: var(--projetos-border) 10px solid;
     border-right: var(--projetos-border) 10px solid;
@@ -553,7 +560,7 @@ div img[alt="VEGAS18"] {
 
     text-align: center;
     border-radius: 10px;
-    background-color: black;
+    background: linear-gradient(45deg, black, gray, black 50%);
     border-left: 5px solid white;
     border-right: 5px solid white;
     transition: all 0.3s ease-in-out;
@@ -658,6 +665,9 @@ div img[alt="VEGAS18"] {
     background-color: var(--exp-competencia-bg);
 }
 
+
+
+
 /************ SECTION CONTACT ************/
 
 #helloWorld {
@@ -733,13 +743,9 @@ footer a:hover {
 
 /* --- Adjust Desktop --- */
 .nav-desktop {
-    gap: 50px;
-    width: 100%;
     display: flex;
     margin: 0 auto;
-    max-width: 1100px;
     flex-wrap: nowrap;
-    padding-right: 180px;
     justify-content: space-between;
 }
 
@@ -749,9 +755,13 @@ footer a:hover {
 }
 
 /* --- Mobile Menu --- */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 .nav-desktop {
     display: none;
+}
+
+:root {
+ --nav-gradient: linear-gradient(45deg,#ffffff 60%, #00ff80 80%);
 }
 
 .nav-mobile {
@@ -761,9 +771,13 @@ footer a:hover {
     justify-content: space-between;
 }
 
+.nav-mobile a {
+    font-size: 12pt;
+}
+
 .hamburger {
     cursor: pointer;
-    font-size: 15pt;
+    font-size: 12pt;
     font-weight: bold;
     color: var(--nav-link-color);
     transition: all 0.3s ease-in-out;
